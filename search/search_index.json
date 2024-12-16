@@ -1,0 +1,1 @@
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"This is a sample Documentation","text":"<p>If you see this, then you have successfully installed mkdocs setup and run it in your machine.</p> <p>Visit <code>docs/</code> directory and start creating an awesome documentation.</p>"}]}
