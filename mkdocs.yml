@@ -1,6 +1,10 @@
-site_name: Documentation Template
+site_name: LinkZoho
 nav:
-  -  Welcome:  'index.md'
+  - Account Overviews:  'index.md'
+  - Plugin Installation: 'plugin-installation.md'
+  - Plugin Activation: 'plugin-activation.md'
+  - Checks & Prerequisites: 'checks-prerequisites.md'
+  - Authentication: 'authentication.md'
 theme:
   name: material
   features:
