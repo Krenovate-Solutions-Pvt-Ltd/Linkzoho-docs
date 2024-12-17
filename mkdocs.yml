@@ -4,6 +4,7 @@ nav:
   - Plugin Installation: 'plugin-installation.md'
   - Plugin Activation: 'plugin-activation.md'
   - Checks & Prerequisites: 'checks-prerequisites.md'
+  - Zoho API Client Credential Setup: 'client-credentials-setup.md'
   - Authentication: 'authentication.md'
 theme:
   name: material
