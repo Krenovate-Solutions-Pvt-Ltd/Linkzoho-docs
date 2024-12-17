@@ -17,7 +17,7 @@ To use LinkZoho on your store you will need your exclusive license key and map y
 3. Click the button ‘Add domain’ in front of your successful order. Order status should be ‘processing’ or ‘completed’
 4. You will see your license key, don’t share this key with anyone. You will need this key on the activation stage.
 5. In the domain mapping box, enter the full homepage url of your store. If your store is on a subdomain or a subdirectory then enter the url with full subdomain or subdirectory, look at the image below, don't forget to press save.
-![Domain Mapping](5.png)
-6. ![Domain Mapped](6.png)
+![Domain Mapping](image-2.png)
+6. ![Domain Mapped](image-1.png)
 7. After saving it should look like the above image, if you entered a wrong url, press edit and map again.
 

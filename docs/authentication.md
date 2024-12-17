@@ -1,5 +1,5 @@
 Your authentication screen will look like the below image, after successful authentication
-![Authentication](authentication.png)
+![Authentication](image-7.png)
 
 1. Enter the following details before connecting and authenticating
     - Client ID (Refer Zoho API Client Credential Setup)
