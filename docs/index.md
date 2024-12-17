@@ -1,4 +1,4 @@
-# LinkZoho- Installation, Activation and Setup Doc
+# **LinkZoho- Installation, Activation and Setup Doc**
 
 Congratulations on purchasing LinkZoho subscription. Now your invoices will have the power of AI and will be generated 100% automatically.
 
