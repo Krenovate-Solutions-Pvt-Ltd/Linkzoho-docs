@@ -23,9 +23,13 @@ Ideal for region-specific tax, language, or compliance requirements.
 2. Assign templates to country groups:
 
     a. Under Select Invoice Template, choose a template (e.g., "USA Invoice Template").
+
     b. Click Select Countries and choose valid countries (e.g., United States).
+
     c. Click Insert Row to add another template-country group (e.g., assign "ROW" to Albania, Belize, etc.).
+
     d. Repeat until all countries are mapped.
+    
     e. Use Delete to remove incorrect entries.
 
 3. Click Save Changes.

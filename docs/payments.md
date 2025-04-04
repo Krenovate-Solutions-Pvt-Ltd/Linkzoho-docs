@@ -18,8 +18,10 @@ Ideal for multi-branch businesses needing localized financial tracking.
 
 1. For each payment method (e.g., "Check Payments"):
 
-    a.  "Same Zoho Banking for all branches."
+    a. "Same Zoho Banking for all branches."
+
     b. Under Branch / Business Locations, select the applicable branches (e.g., "Head Office," "SouthWest Branch, etc.").
+    
     c. Under Zoho Banking, choose the banking account linked to those branches.
     
 2. Repeat for all payment methods.
