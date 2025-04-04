@@ -6,6 +6,9 @@ nav:
   - Checks & Prerequisites: 'checks-prerequisites.md'
   - Zoho API Client Credential Setup: 'client-credentials-setup.md'
   - Authentication: 'authentication.md'
+  - Sales Orders: 'sales-orders.md'
+  - Invoices: 'invoices.md'
+  - Payments: 'payments.md'
 theme:
   name: material
   features:
