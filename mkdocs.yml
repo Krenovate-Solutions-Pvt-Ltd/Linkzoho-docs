@@ -8,6 +8,7 @@ nav:
   - Authentication: 'authentication.md'
   - Sales Orders: 'sales-orders.md'
   - Invoices: 'invoices.md'
+  - Inventory: 'inventory.md'
   - Payments: 'payments.md'
 theme:
   name: material
