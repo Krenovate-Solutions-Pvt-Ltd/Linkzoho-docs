@@ -21,6 +21,7 @@ nav:
       - Image Management: 'lz-sku-sync/image-management.md'
       - Inventory: 'lz-sku-sync/inventory.md'
       - Monitoring: 'lz-sku-sync/monitoring.md'
+      - Sync Log: 'lz-sku-sync/sync-log.md'
       - Webhooks: 'lz-sku-sync/webhooks.md'
       - Troubleshooting: 'lz-sku-sync/troubleshooting.md'
 theme:

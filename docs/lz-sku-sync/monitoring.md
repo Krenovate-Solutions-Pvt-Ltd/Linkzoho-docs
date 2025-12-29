@@ -167,7 +167,10 @@ For detailed technical logs:
 
 1. Go to **LZ SKU Sync > Sync Log**
 2. You can view the logs for the last 30 days
-3. Check Action Scheduler "Failed" for errors
+3. Use advanced search, filters, and sorting features
+
+!!! tip
+    See the [**Sync Log Guide →**](sync-log.md) for complete documentation on using search, filters, and troubleshooting with the Sync Log.
 
 ![Sync Log](images/sync-log.png)
 
@@ -267,7 +270,7 @@ For detailed technical logs:
 **Solution:**
 
 - Hard refresh browser (Ctrl+F5 or Cmd+Shift+R)
-- Check **LZ SKU Sync > Sync Log** for queue status
+- Check **LZ SKU Sync > Sync Log** for queue status (see [Sync Log Guide](sync-log.md))
 - Review PHP error logs
 
 ### Recently Synced Items Empty

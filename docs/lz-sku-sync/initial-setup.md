@@ -193,6 +193,7 @@ To disconnect and reconnect with a different organization:
 **Problem:** "Failed to connect to Zoho" error
 
 **Solution:**
+
 - Check your internet connection
 - Verify Zoho Inventory is accessible
 - Try disconnecting and reconnecting
@@ -203,6 +204,7 @@ To disconnect and reconnect with a different organization:
 **Problem:** Your organization doesn't show in the dropdown
 
 **Solution:**
+
 - Verify you have admin access to the organization in Zoho
 - Check that the organization has Zoho Inventory enabled
 - Try logging out of Zoho and reconnecting
@@ -212,6 +214,7 @@ To disconnect and reconnect with a different organization:
 **Problem:** "Token expired" or "Authentication failed" errors
 
 **Solution:**
+
 - The plugin auto-refreshes tokens every 58 minutes
 - If refresh fails, disconnect and reconnect
 - Check that your Zoho account hasn't been suspended
@@ -222,6 +225,7 @@ To disconnect and reconnect with a different organization:
 **Problem:** API calls failing due to incorrect datacenter
 
 **Solution:**
+
 - The datacenter is detected from your Zoho account region
 - Disconnect and reconnect to refresh datacenter detection
 - Contact support if issue persists
