@@ -1,0 +1,2228 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../initial-setup/">
+      
+      
+        <link rel="next" href="../product-settings/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Sync Methods - LinkZoho Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#synchronization-methods" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="LinkZoho Documentation" class="md-header__button md-logo" aria-label="LinkZoho Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LinkZoho Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sync Methods
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="LinkZoho Documentation" class="md-nav__button md-logo" aria-label="LinkZoho Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LinkZoho Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LZ Books
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LZ Books
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/plugin-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/plugin-activation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/checks-prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prerequisites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/client-credentials-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client Credentials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/sales-orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sales Orders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/invoices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Invoices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/payments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LZ SKU Sync
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LZ SKU Sync
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../initial-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Initial Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync Methods
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync Methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#choose-your-sync-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choose Your Sync Method
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Choose Your Sync Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-manual-sync-one-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method 1: Manual Sync (One-Time)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-real-time-webhook-sync-always" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method 2: Real-Time Webhook Sync (Always)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-1-manual-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method 1: Manual Sync
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method 1: Manual Sync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-manual-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use Manual Sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-manual-sync-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Manual Sync Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-process-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync Process Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding the Progress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync Controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sync Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pause" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏸️ Pause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ▶️ Resume
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Cancel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-2-real-time-webhook-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method 2: Real-Time Webhook Sync
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method 2: Real-Time Webhook Sync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-webhook-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use Webhook Sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-webhook-sync-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Webhook Sync Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-webhook-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enabling Webhook Sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-automatically" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Happens Automatically
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-status-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Status Indicator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toggling-webhook-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toggling Webhook Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security &amp; Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Webhooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-sync-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparing Sync Methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-both-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining Both Methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sync-frequency-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync Frequency Recommendations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sync Frequency Recommendations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-volume-stores-100-skus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Volume Stores (100+ SKUs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#low-volume-stores-100-skus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Low-Volume Stores (&lt; 100 SKUs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seasonalevent-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seasonal/Event-Based
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-gets-synchronized" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Gets Synchronized?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-sync-stuck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual Sync Stuck
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhooks-not-receiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhooks Not Receiving
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-products-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Duplicate Products Created
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../product-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../image-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Image Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-log/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Webhooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#choose-your-sync-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choose Your Sync Method
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Choose Your Sync Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method-1-manual-sync-one-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method 1: Manual Sync (One-Time)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method-2-real-time-webhook-sync-always" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method 2: Real-Time Webhook Sync (Always)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-1-manual-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method 1: Manual Sync
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method 1: Manual Sync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-manual-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use Manual Sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-manual-sync-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Manual Sync Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-process-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync Process Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding the Progress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync Controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sync Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pause" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏸️ Pause
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ▶️ Resume
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Cancel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#method-2-real-time-webhook-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Method 2: Real-Time Webhook Sync
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Method 2: Real-Time Webhook Sync">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use-webhook-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Use Webhook Sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-webhook-sync-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Webhook Sync Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-webhook-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enabling Webhook Sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-automatically" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Happens Automatically
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-status-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Status Indicator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toggling-webhook-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toggling Webhook Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security &amp; Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Webhooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-sync-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparing Sync Methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-both-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining Both Methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sync-frequency-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync Frequency Recommendations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sync Frequency Recommendations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#high-volume-stores-100-skus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        High-Volume Stores (100+ SKUs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#low-volume-stores-100-skus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Low-Volume Stores (&lt; 100 SKUs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seasonalevent-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seasonal/Event-Based
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-gets-synchronized" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Gets Synchronized?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-sync-stuck" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual Sync Stuck
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhooks-not-receiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhooks Not Receiving
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-products-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Duplicate Products Created
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="synchronization-methods">Synchronization Methods<a class="headerlink" href="#synchronization-methods" title="Permanent link">&para;</a></h1>
+<p>LZ SKU Sync offers two powerful ways to keep your WooCommerce products synchronized with Zoho Inventory.</p>
+<hr />
+<h2 id="choose-your-sync-method">Choose Your Sync Method<a class="headerlink" href="#choose-your-sync-method" title="Permanent link">&para;</a></h2>
+<h3 id="method-1-manual-sync-one-time">Method 1: Manual Sync (One-Time)<a class="headerlink" href="#method-1-manual-sync-one-time" title="Permanent link">&para;</a></h3>
+<p>Best for initial setup, occasional bulk updates, or when you prefer full control over when synchronization occurs.</p>
+<h3 id="method-2-real-time-webhook-sync-always">Method 2: Real-Time Webhook Sync (Always)<a class="headerlink" href="#method-2-real-time-webhook-sync-always" title="Permanent link">&para;</a></h3>
+<p>Best for continuous operations where Zoho Inventory is your primary product management system and you want instant updates in WooCommerce.</p>
+<hr />
+<h2 id="method-1-manual-sync">Method 1: Manual Sync<a class="headerlink" href="#method-1-manual-sync" title="Permanent link">&para;</a></h2>
+<h3 id="when-to-use-manual-sync">When to Use Manual Sync<a class="headerlink" href="#when-to-use-manual-sync" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Initial product import from Zoho to WooCommerce</li>
+<li>✅ Periodic bulk updates</li>
+<li>✅ Testing sync settings before enabling webhooks</li>
+<li>✅ When you prefer to control sync timing</li>
+</ul>
+<h3 id="how-manual-sync-works">How Manual Sync Works<a class="headerlink" href="#how-manual-sync-works" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Navigate</strong> to <strong>LZ SKU Sync &gt; Sync Status</strong></li>
+<li><strong>Configure</strong> your sync preferences (see Product Settings)</li>
+<li><strong>Click</strong> the <strong>Start Sync</strong> button</li>
+<li><strong>Monitor</strong> real-time progress</li>
+<li><strong>Review</strong> recently synced items as they complete</li>
+</ol>
+<p><img alt="Manual Sync Interface" src="../images/manual-sync-interface.png" /></p>
+<h3 id="sync-process-flow">Sync Process Flow<a class="headerlink" href="#sync-process-flow" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph TD
+    A[Click Start Sync] --&gt; B[Fetch Inventory from Zoho]
+    B --&gt; C[Compare SKUs]
+    C --&gt; D[Prepare Sync Queue]
+    D --&gt; E[Process Products in Batches]
+    E --&gt; F[Download Images]
+    F --&gt; G[Create/Update Products]
+    G --&gt; H[Optimize Images]
+    H --&gt; I[Sync Complete]</code></pre>
+<h3 id="understanding-the-progress">Understanding the Progress<a class="headerlink" href="#understanding-the-progress" title="Permanent link">&para;</a></h3>
+<p>During manual sync, you'll see:</p>
+<ul>
+<li><strong>Total Products</strong>: Number of products queued for sync</li>
+<li><strong>Synced</strong>: Successfully processed products</li>
+<li><strong>Failed</strong>: Products that encountered errors</li>
+<li><strong>Pending</strong>: Products waiting in queue</li>
+<li><strong>Progress Bar</strong>: Visual representation of completion</li>
+</ul>
+<p><img alt="Sync Progress" src="../images/sync-progress.png" /></p>
+<h3 id="sync-controls">Sync Controls<a class="headerlink" href="#sync-controls" title="Permanent link">&para;</a></h3>
+<h4 id="pause">⏸️ Pause<a class="headerlink" href="#pause" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Temporarily stops the synchronization</li>
+<li>Products in queue remain saved</li>
+<li>Click <strong>Resume</strong> to continue from where you left off</li>
+<li>Useful when you need to update settings mid-sync</li>
+</ul>
+<h4 id="resume">▶️ Resume<a class="headerlink" href="#resume" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Continues a paused sync</li>
+<li>Processes remaining products in queue</li>
+<li>No products are re-synced</li>
+</ul>
+<h4 id="cancel">❌ Cancel<a class="headerlink" href="#cancel" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Stops the sync permanently</li>
+<li>Clears the product queue</li>
+<li>Cannot be resumed (you'll need to start a new sync)</li>
+<li>Already synced products remain in WooCommerce</li>
+</ul>
+<h3 id="background-processing">Background Processing<a class="headerlink" href="#background-processing" title="Permanent link">&para;</a></h3>
+<p>Manual sync uses <strong>WordPress Action Scheduler</strong> to process products in the background:</p>
+<ul>
+<li>✅ Products processed one at a time</li>
+<li>✅ Prevents timeouts and server overload</li>
+<li>✅ Continues even if you close the browser</li>
+<li>✅ Full logging for troubleshooting</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can check detailed logs at <strong>LZ SKU Sync &gt; Sync Log</strong> in WordPress admin.</p>
+</div>
+<hr />
+<h2 id="method-2-real-time-webhook-sync">Method 2: Real-Time Webhook Sync<a class="headerlink" href="#method-2-real-time-webhook-sync" title="Permanent link">&para;</a></h2>
+<h3 id="when-to-use-webhook-sync">When to Use Webhook Sync<a class="headerlink" href="#when-to-use-webhook-sync" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Zoho Inventory is your primary product management system</li>
+<li>✅ You need instant updates in WooCommerce</li>
+<li>✅ Products are frequently created or updated in Zoho</li>
+<li>✅ You want a "set and forget" solution</li>
+</ul>
+<h3 id="how-webhook-sync-works">How Webhook Sync Works<a class="headerlink" href="#how-webhook-sync-works" title="Permanent link">&para;</a></h3>
+<p>Webhooks provide <strong>real-time synchronization</strong> triggered by changes in Zoho Inventory.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Zoho as Zoho Inventory
+    participant Webhook as Zoho Webhook
+    participant WP as WordPress Site
+    participant AS as Action Scheduler
+    participant WC as WooCommerce
+
+    Zoho-&gt;&gt;Webhook: Item Created/Updated
+    Webhook-&gt;&gt;WP: POST to WordPress REST API
+    WP-&gt;&gt;WP: Verify HMAC Signature
+    WP-&gt;&gt;Zoho: Fetch Full Item Details
+    WP-&gt;&gt;AS: Enqueue Sync Job
+    AS-&gt;&gt;WC: Create/Update Product
+    AS-&gt;&gt;WC: Download &amp; Attach Images</code></pre>
+<h3 id="enabling-webhook-sync">Enabling Webhook Sync<a class="headerlink" href="#enabling-webhook-sync" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Go to <strong>LZ SKU Sync &gt; Sync Status</strong></li>
+<li>Find <strong>Sync Frequency</strong> setting</li>
+<li>Change from <strong>"One-Time"</strong> to <strong>"Always (Real-time webhook)"</strong></li>
+<li>Click <strong>Save Preferences</strong></li>
+</ol>
+<h3 id="what-happens-automatically">What Happens Automatically<a class="headerlink" href="#what-happens-automatically" title="Permanent link">&para;</a></h3>
+<p>When you enable webhook sync, the plugin:</p>
+<ol>
+<li>✅ Creates a webhook in Zoho Inventory</li>
+<li>✅ Creates a workflow rule to trigger on item changes</li>
+<li>✅ Registers a REST API endpoint in WordPress</li>
+<li>✅ Configures HMAC signature verification</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You don't need to manually configure anything in Zoho. The plugin handles everything automatically!</p>
+</div>
+<h3 id="webhook-status-indicator">Webhook Status Indicator<a class="headerlink" href="#webhook-status-indicator" title="Permanent link">&para;</a></h3>
+<p>The webhook status is shown with a visual indicator:</p>
+<ul>
+<li>🟢 <strong>Active</strong> (Green): Webhook is receiving updates</li>
+<li>🔴 <strong>Inactive</strong> (Red): Webhook is paused or disabled</li>
+</ul>
+<p><img alt="Webhook Status" src="../images/webhook-status.png" /></p>
+<h3 id="toggling-webhook-status">Toggling Webhook Status<a class="headerlink" href="#toggling-webhook-status" title="Permanent link">&para;</a></h3>
+<p>To pause or resume webhook sync:</p>
+<ol>
+<li>Click the <strong>webhook status indicator</strong></li>
+<li>Webhook will toggle between active and inactive</li>
+<li>When inactive, Zoho events are ignored</li>
+<li>When active, sync resumes automatically</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use this to temporarily pause real-time sync without deleting the webhook configuration.</p>
+</div>
+<h3 id="security-validation">Security &amp; Validation<a class="headerlink" href="#security-validation" title="Permanent link">&para;</a></h3>
+<p>Every webhook request is secured with:</p>
+<ul>
+<li>🔒 <strong>HMAC SHA256 Signature</strong>: Verifies request is from Zoho</li>
+<li>🔐 <strong>License Validation</strong>: Active license required</li>
+<li>✅ <strong>Frequency Check</strong>: Only processes if webhooks are enabled</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Your license key is used as the HMAC secret. Keep it confidential!</p>
+</div>
+<h3 id="monitoring-webhooks">Monitoring Webhooks<a class="headerlink" href="#monitoring-webhooks" title="Permanent link">&para;</a></h3>
+<p>Track webhook activity:</p>
+<ol>
+<li>Go to <strong>LZ SKU Sync &gt; Sync Status</strong></li>
+<li>Scroll to <strong>Webhook Sync Log</strong></li>
+<li>Webhook-triggered syncs log shows all the recent webhook syncs</li>
+<li>Timestamp shows when the webhook was received</li>
+</ol>
+<p>You can also check:
+- <strong>Last Received</strong>: Timestamp of last successful webhook
+- <strong>Webhook Sync Log</strong>: 30-day history of all webhook events</p>
+<hr />
+<h2 id="comparing-sync-methods">Comparing Sync Methods<a class="headerlink" href="#comparing-sync-methods" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Manual Sync</th>
+<th>Webhook Sync</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Trigger</strong></td>
+<td>Manual button click</td>
+<td>Automatic (Zoho changes)</td>
+</tr>
+<tr>
+<td><strong>Timing</strong></td>
+<td>On-demand</td>
+<td>Real-time (within seconds)</td>
+</tr>
+<tr>
+<td><strong>Best For</strong></td>
+<td>Initial setup, bulk updates</td>
+<td>Ongoing operations</td>
+</tr>
+<tr>
+<td><strong>Control</strong></td>
+<td>Full control over timing</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td><strong>Batch Size</strong></td>
+<td>All queued products</td>
+<td>Single product per event</td>
+</tr>
+<tr>
+<td><strong>Pause/Resume</strong></td>
+<td>✅ Yes</td>
+<td>⚠️ Toggle active/inactive</td>
+</tr>
+<tr>
+<td><strong>Requires Setup</strong></td>
+<td>Minimal</td>
+<td>One-time enable</td>
+</tr>
+<tr>
+<td><strong>API Calls</strong></td>
+<td>Batch (efficient)</td>
+<td>Per event</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="combining-both-methods">Combining Both Methods<a class="headerlink" href="#combining-both-methods" title="Permanent link">&para;</a></h2>
+<p>You can use both sync methods:</p>
+<ol>
+<li><strong>Initial Setup</strong>: Run a manual sync to import all existing products</li>
+<li><strong>Ongoing</strong>: Enable webhook sync for real-time updates</li>
+<li><strong>Periodic</strong>: Run manual sync occasionally to catch any missed items</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Best Practice</strong>: Start with a manual sync to establish your product catalog, then enable webhooks for continuous updates.</p>
+</div>
+<hr />
+<h2 id="sync-frequency-recommendations">Sync Frequency Recommendations<a class="headerlink" href="#sync-frequency-recommendations" title="Permanent link">&para;</a></h2>
+<h3 id="high-volume-stores-100-skus">High-Volume Stores (100+ SKUs)<a class="headerlink" href="#high-volume-stores-100-skus" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use webhook sync for real-time updates</li>
+<li>Run manual sync weekly to verify consistency</li>
+</ul>
+<h3 id="low-volume-stores-100-skus">Low-Volume Stores (&lt; 100 SKUs)<a class="headerlink" href="#low-volume-stores-100-skus" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Manual sync may be sufficient</li>
+<li>Run sync when making product changes in Zoho</li>
+</ul>
+<h3 id="seasonalevent-based">Seasonal/Event-Based<a class="headerlink" href="#seasonalevent-based" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Manual sync before major sales or catalog changes</li>
+<li>Enable webhooks during peak seasons</li>
+</ul>
+<hr />
+<h2 id="what-gets-synchronized">What Gets Synchronized?<a class="headerlink" href="#what-gets-synchronized" title="Permanent link">&para;</a></h2>
+<p>Both sync methods sync the same product data based on your <a href="../product-settings/">Product Settings</a>:</p>
+<ul>
+<li>✅ Product name and description</li>
+<li>✅ SKU</li>
+<li>✅ Price (regular price)</li>
+<li>✅ Stock quantity and status</li>
+<li>✅ Low stock threshold</li>
+<li>✅ Weight and dimensions</li>
+<li>✅ Product images (featured and gallery)</li>
+<li>✅ Product variations and attributes</li>
+</ul>
+<hr />
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>Now that you understand both sync methods:</p>
+<ul>
+<li><a href="../product-settings/"><strong>Configure Product Settings →</strong></a> - Customize what data to sync</li>
+<li><a href="../image-management/"><strong>Learn About Image Management →</strong></a> - Understand how images are handled</li>
+<li><a href="../monitoring/"><strong>Set Up Monitoring →</strong></a> - Track sync progress and logs</li>
+</ul>
+<hr />
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="manual-sync-stuck">Manual Sync Stuck<a class="headerlink" href="#manual-sync-stuck" title="Permanent link">&para;</a></h3>
+<h3 id="webhooks-not-receiving">Webhooks Not Receiving<a class="headerlink" href="#webhooks-not-receiving" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Changes in Zoho don't appear in WooCommerce</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Check webhook status indicator (should be green)</li>
+<li>Verify license is active</li>
+<li>Test webhook endpoint: <code>https://yoursite.com/wp-json/lz-sku-sync/v1/webhook</code></li>
+<li>Review webhook logs at <strong>Sync Status &gt; Webhook Sync Log</strong></li>
+</ul>
+<h3 id="duplicate-products-created">Duplicate Products Created<a class="headerlink" href="#duplicate-products-created" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Webhook creates duplicate instead of updating</p>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Verify SKUs match exactly between Zoho and WooCommerce</li>
+<li>Check that "Create Missing Products" is configured correctly</li>
+<li>Review recently synced items for conflict patterns</li>
+</ul>
+<hr />
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<p>Questions about sync methods?</p>
+<ul>
+<li>📧 Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#97;&#108;&#101;&#115;&#64;&#108;&#105;&#110;&#107;&#122;&#111;&#104;&#111;&#46;&#99;&#111;&#109;">&#115;&#97;&#108;&#101;&#115;&#64;&#108;&#105;&#110;&#107;&#122;&#111;&#104;&#111;&#46;&#99;&#111;&#109;</a>, <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#107;&#114;&#101;&#110;&#111;&#118;&#97;&#116;&#101;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#107;&#114;&#101;&#110;&#111;&#118;&#97;&#116;&#101;&#46;&#99;&#111;&#109;</a></li>
+<li>📖 <a href="../troubleshooting/">View Troubleshooting Guide</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 29, 2025 12:33:18 UTC">December 29, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["instant"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
