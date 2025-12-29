@@ -1,15 +1,28 @@
-site_name: LinkZoho
+site_name: LinkZoho Documentation
 nav:
-  - Account Overviews:  'index.md'
-  - Plugin Installation: 'plugin-installation.md'
-  - Plugin Activation: 'plugin-activation.md'
-  - Checks & Prerequisites: 'checks-prerequisites.md'
-  - Zoho API Client Credential Setup: 'client-credentials-setup.md'
-  - Authentication: 'authentication.md'
-  - Sales Orders: 'sales-orders.md'
-  - Invoices: 'invoices.md'
-  - Inventory: 'inventory.md'
-  - Payments: 'payments.md'
+  - Home: 'index.md'
+  - LZ Books:
+      - Overview: 'lz-books/index.md'
+      - Installation: 'lz-books/plugin-installation.md'
+      - Activation: 'lz-books/plugin-activation.md'
+      - Prerequisites: 'lz-books/checks-prerequisites.md'
+      - Client Credentials: 'lz-books/client-credentials-setup.md'
+      - Authentication: 'lz-books/authentication.md'
+      - Sales Orders: 'lz-books/sales-orders.md'
+      - Invoices: 'lz-books/invoices.md'
+      - Inventory: 'lz-books/inventory.md'
+      - Payments: 'lz-books/payments.md'
+  - LZ SKU Sync:
+      - Overview: 'lz-sku-sync/index.md'
+      - Installation: 'lz-sku-sync/installation.md'
+      - Initial Setup: 'lz-sku-sync/initial-setup.md'
+      - Sync Methods: 'lz-sku-sync/sync-methods.md'
+      - Product Settings: 'lz-sku-sync/product-settings.md'
+      - Image Management: 'lz-sku-sync/image-management.md'
+      - Inventory: 'lz-sku-sync/inventory.md'
+      - Monitoring: 'lz-sku-sync/monitoring.md'
+      - Webhooks: 'lz-sku-sync/webhooks.md'
+      - Troubleshooting: 'lz-sku-sync/troubleshooting.md'
 theme:
   name: material
   features:
@@ -23,12 +36,12 @@ theme:
 
 plugins:
   - search:
-      prebuild_index: true
       lang:
         - en
   - git-revision-date-localized
 
 markdown_extensions:
+  - attr_list
   - admonition
   - codehilite:
       guess_lang: false
@@ -41,13 +54,17 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tabbed
