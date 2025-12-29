@@ -1,0 +1,3040 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../monitoring/">
+      
+      
+        <link rel="next" href="../webhooks/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Sync Log - LinkZoho Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sync-log" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="LinkZoho Documentation" class="md-header__button md-logo" aria-label="LinkZoho Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LinkZoho Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sync Log
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="LinkZoho Documentation" class="md-nav__button md-logo" aria-label="LinkZoho Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LinkZoho Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LZ Books
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LZ Books
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/plugin-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/plugin-activation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/checks-prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prerequisites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/client-credentials-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client Credentials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/sales-orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sales Orders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/invoices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Invoices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/payments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LZ SKU Sync
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LZ SKU Sync
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../initial-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Initial Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync Methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../product-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../image-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Image Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync Log
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-sync-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Sync Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-sync-log-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding the Sync Log Table
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding the Sync Log Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-status-badges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Status Badges
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Action Status Badges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pending" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟡 Pending
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔵 In-Progress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 Complete
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔴 Failed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canceled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚫ Canceled
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-action-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Action Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Action Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variation-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variation Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search Functionality
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search Functionality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-can-you-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Can You Search?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Search
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtering Options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filtering Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#action-status-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Status Filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-type-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Type Filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-range-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Date Range Filters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reset Filters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sorting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Sort
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sort Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pagination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pagination
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pagination">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pagination-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pagination Controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Page Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation Tips
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action-logs-column" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Logs Column
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Action Logs Column">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-logged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's Logged
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-entry-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Entry Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scrollable-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scrollable Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-logs-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No Logs Available
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-sync-log-for-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Sync Log for Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Sync Log for Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-failed-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding Failed Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracking-specific-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tracking Specific Products
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-webhook-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Webhook Activity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#investigating-slow-syncs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Investigating Slow Syncs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regular-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regular Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-manual-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After Manual Sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Retention
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-product-not-syncing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 1: Product Not Syncing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-images-missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 2: Images Missing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-webhook-not-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 3: Webhook Not Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-variation-not-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 4: Variation Not Created
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#action-scheduler-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Scheduler Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorting-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sorting Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keyboard Shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#30-day-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        30-Day Window
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-scheduler-dependency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Scheduler Dependency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-export-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No Export Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Webhooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-sync-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Sync Log
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-sync-log-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding the Sync Log Table
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding the Sync Log Table">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table Columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-status-badges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Status Badges
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Action Status Badges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pending" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟡 Pending
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔵 In-Progress
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🟢 Complete
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔴 Failed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canceled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚫ Canceled
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-action-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Action Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Action Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variation-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variation Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Image Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search Functionality
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Search Functionality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-can-you-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Can You Search?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Search
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtering Options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filtering Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#action-status-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Status Filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#product-type-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Type Filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-range-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Date Range Filters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reset Filters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sorting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Sort
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sort-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sort Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pagination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pagination
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pagination">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pagination-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pagination Controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#page-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Page Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigation Tips
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action-logs-column" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Logs Column
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Action Logs Column">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-logged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's Logged
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-entry-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Entry Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scrollable-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scrollable Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-logs-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No Logs Available
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-sync-log-for-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Sync Log for Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Sync Log for Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#finding-failed-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Finding Failed Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tracking-specific-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tracking Specific Products
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-webhook-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Webhook Activity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#investigating-slow-syncs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Investigating Slow Syncs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regular-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regular Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-manual-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After Manual Sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Retention
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario-1-product-not-syncing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 1: Product Not Syncing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-2-images-missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 2: Images Missing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-3-webhook-not-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 3: Webhook Not Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario-4-variation-not-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scenario 4: Variation Not Created
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#action-scheduler-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Scheduler Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorting-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sorting Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyboard-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keyboard Shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#30-day-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        30-Day Window
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-scheduler-dependency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Scheduler Dependency
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-export-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No Export Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sync-log">Sync Log<a class="headerlink" href="#sync-log" title="Permanent link">&para;</a></h1>
+<p>Comprehensive logging and monitoring of all synchronization activities with advanced search, filtering, and sorting capabilities.</p>
+<hr />
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The <strong>Sync Log</strong> provides a detailed 30-day history of all synchronization activities in LZ SKU Sync. It tracks every action performed by the plugin, including product creation, updates, image processing, and webhook events, along with their execution status and detailed logs.</p>
+<hr />
+<h2 id="accessing-sync-log">Accessing Sync Log<a class="headerlink" href="#accessing-sync-log" title="Permanent link">&para;</a></h2>
+<p>Navigate to <strong>LZ SKU Sync &gt; Sync Log</strong> in your WordPress admin panel.</p>
+<p>The Sync Log interface displays all sync activities from the last 30 days with powerful search and filtering tools.</p>
+<hr />
+<h2 id="understanding-the-sync-log-table">Understanding the Sync Log Table<a class="headerlink" href="#understanding-the-sync-log-table" title="Permanent link">&para;</a></h2>
+<h3 id="table-columns">Table Columns<a class="headerlink" href="#table-columns" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>S.No</strong></td>
+<td>Sequential number for the current page view</td>
+</tr>
+<tr>
+<td><strong>Action ID</strong></td>
+<td>Unique identifier from WordPress Action Scheduler</td>
+</tr>
+<tr>
+<td><strong>Action Type</strong></td>
+<td>Type of sync operation performed</td>
+</tr>
+<tr>
+<td><strong>SKU / Group ID</strong></td>
+<td>Product SKU or Group ID from Zoho</td>
+</tr>
+<tr>
+<td><strong>Product Name</strong></td>
+<td>Name of the product from Zoho Inventory</td>
+</tr>
+<tr>
+<td><strong>Product Type</strong></td>
+<td>Simple, Group, or Variation</td>
+</tr>
+<tr>
+<td><strong>Date &amp; Time</strong></td>
+<td>When the action was queued/executed</td>
+</tr>
+<tr>
+<td><strong>Action Status</strong></td>
+<td>Current status of the action (see below)</td>
+</tr>
+<tr>
+<td><strong>Action Logs</strong></td>
+<td>Detailed execution logs from Action Scheduler</td>
+</tr>
+</tbody>
+</table>
+<h3 id="action-status-badges">Action Status Badges<a class="headerlink" href="#action-status-badges" title="Permanent link">&para;</a></h3>
+<p>The <strong>Action Status</strong> column displays color-coded badges indicating the current state of each action:</p>
+<h4 id="pending">🟡 Pending<a class="headerlink" href="#pending" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Color</strong>: Amber/Yellow badge</li>
+<li><strong>Meaning</strong>: Action is queued but not yet started</li>
+<li><strong>Next Steps</strong>: Will be processed automatically by WordPress cron</li>
+</ul>
+<h4 id="in-progress">🔵 In-Progress<a class="headerlink" href="#in-progress" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Color</strong>: Blue badge</li>
+<li><strong>Meaning</strong>: Action is currently being executed</li>
+<li><strong>Note</strong>: May appear briefly during active sync</li>
+</ul>
+<h4 id="complete">🟢 Complete<a class="headerlink" href="#complete" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Color</strong>: Green badge</li>
+<li><strong>Meaning</strong>: Action successfully completed</li>
+<li><strong>Result</strong>: Product/image successfully synced</li>
+</ul>
+<h4 id="failed">🔴 Failed<a class="headerlink" href="#failed" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Color</strong>: Red badge</li>
+<li><strong>Meaning</strong>: Action encountered an error</li>
+<li><strong>Action Required</strong>: Check Action Logs for error details</li>
+</ul>
+<h4 id="canceled">⚫ Canceled<a class="headerlink" href="#canceled" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Color</strong>: Gray badge</li>
+<li><strong>Meaning</strong>: Action was canceled (usually by user)</li>
+<li><strong>Note</strong>: Will not be retried</li>
+</ul>
+<hr />
+<h2 id="common-action-types">Common Action Types<a class="headerlink" href="#common-action-types" title="Permanent link">&para;</a></h2>
+<h3 id="product-actions">Product Actions<a class="headerlink" href="#product-actions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Created</strong> - New simple product created in WooCommerce</li>
+<li><strong>Updated</strong> - Existing simple product updated</li>
+<li><strong>Product Sync</strong> - General product synchronization</li>
+</ul>
+<h3 id="variation-actions">Variation Actions<a class="headerlink" href="#variation-actions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Created Variation</strong> - New product variation created</li>
+<li><strong>Updated Variation</strong> - Existing variation updated</li>
+<li><strong>Variation Processing</strong> - Background variation processing</li>
+</ul>
+<h3 id="image-actions">Image Actions<a class="headerlink" href="#image-actions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Image Upload</strong> - Product images downloaded and uploaded</li>
+<li><strong>Image Optimization</strong> - Thumbnail generation completed</li>
+<li><strong>Parent Images Assigned</strong> - Gallery images set for variable products</li>
+</ul>
+<h3 id="webhook-actions">Webhook Actions<a class="headerlink" href="#webhook-actions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Webhook Sync</strong> - Real-time webhook-triggered sync</li>
+<li><strong>Webhook Received</strong> - Webhook POST received from Zoho</li>
+</ul>
+<hr />
+<h2 id="search-functionality">Search Functionality<a class="headerlink" href="#search-functionality" title="Permanent link">&para;</a></h2>
+<p>The search box allows you to quickly find specific sync activities.</p>
+<h3 id="what-can-you-search">What Can You Search?<a class="headerlink" href="#what-can-you-search" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Action ID</li>
+<li>Action Type</li>
+<li>SKU or Group ID</li>
+<li>Product Name</li>
+<li>Product Type</li>
+<li>Action Status</li>
+</ul>
+<h3 id="how-to-search">How to Search<a class="headerlink" href="#how-to-search" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Type your search term in the <strong>Search</strong> box</li>
+<li>Results filter automatically as you type (150ms debounce)</li>
+<li>Search is case-insensitive</li>
+<li>Matches partial text across all searchable columns</li>
+</ol>
+<p><strong>Examples:</strong>
+- Search <code>"12345"</code> - Finds Action ID 12345 or SKUs containing 12345
+- Search <code>"Image Upload"</code> - Shows all image upload actions
+- Search <code>"Complete"</code> - Shows all completed actions
+- Search <code>"PROD-001"</code> - Finds product with SKU PROD-001</p>
+<hr />
+<h2 id="filtering-options">Filtering Options<a class="headerlink" href="#filtering-options" title="Permanent link">&para;</a></h2>
+<h3 id="action-status-filter">Action Status Filter<a class="headerlink" href="#action-status-filter" title="Permanent link">&para;</a></h3>
+<p>Filter sync activities by their execution status:</p>
+<ol>
+<li>Click <strong>Action Status</strong> dropdown</li>
+<li>Select status:</li>
+<li><strong>All</strong> - Show all statuses</li>
+<li><strong>Pending</strong> - Queued actions</li>
+<li><strong>In-progress</strong> - Currently executing</li>
+<li><strong>Complete</strong> - Successfully finished</li>
+<li><strong>Failed</strong> - Encountered errors</li>
+<li><strong>Canceled</strong> - User-canceled actions</li>
+<li>Table updates automatically</li>
+</ol>
+<h3 id="product-type-filter">Product Type Filter<a class="headerlink" href="#product-type-filter" title="Permanent link">&para;</a></h3>
+<p>Filter by the type of product:</p>
+<ol>
+<li>Click <strong>Product Type</strong> dropdown</li>
+<li>Select from available types:</li>
+<li><strong>All</strong> - Show all types</li>
+<li><strong>Simple</strong> - Simple products only</li>
+<li><strong>Group</strong> - Product groups (variable products)</li>
+<li><strong>Variation</strong> - Individual variations</li>
+<li>Dropdown is auto-populated from your actual data</li>
+</ol>
+<h3 id="date-range-filters">Date Range Filters<a class="headerlink" href="#date-range-filters" title="Permanent link">&para;</a></h3>
+<p>Filter actions within a specific date range:</p>
+<p><strong>From Date:</strong></p>
+<ol>
+<li>Click <strong>From date</strong> field</li>
+<li>Select start date from calendar picker</li>
+<li>Only actions on or after this date will show</li>
+</ol>
+<p><strong>To Date:</strong></p>
+<ol>
+<li>Click <strong>To date</strong> field</li>
+<li>Select end date from calendar picker</li>
+<li>Only actions on or before this date will show</li>
+</ol>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>From date starts at 00:00:00 (midnight)</li>
+<li>To date ends at 23:59:59 (end of day)</li>
+<li>Both dates are optional</li>
+<li>Use only "From" to see everything since a date</li>
+<li>Use only "To" to see everything before a date</li>
+</ul>
+<h3 id="reset-filters">Reset Filters<a class="headerlink" href="#reset-filters" title="Permanent link">&para;</a></h3>
+<p>Click the <strong>Reset</strong> button to clear all filters and search:</p>
+<ul>
+<li>Clears search text</li>
+<li>Resets all dropdowns to "All"</li>
+<li>Clears date range</li>
+<li>Returns to page 1</li>
+</ul>
+<hr />
+<h2 id="sorting">Sorting<a class="headerlink" href="#sorting" title="Permanent link">&para;</a></h2>
+<p>The Sync Log supports sorting on two columns: <strong>Action ID</strong> and <strong>Date &amp; Time</strong>.</p>
+<h3 id="how-to-sort">How to Sort<a class="headerlink" href="#how-to-sort" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click on a sortable column header</li>
+<li><strong>Action ID</strong> (sortable)</li>
+<li><strong>Date &amp; Time</strong> (sortable)</li>
+<li>Click once for <strong>descending</strong> order (newest/highest first)</li>
+<li>Click again to toggle to <strong>ascending</strong> order</li>
+<li>Visual indicators show current sort:</li>
+<li><strong>▲</strong> = Ascending</li>
+<li><strong>▼</strong> = Descending</li>
+</ol>
+<h3 id="sort-behavior">Sort Behavior<a class="headerlink" href="#sort-behavior" title="Permanent link">&para;</a></h3>
+<p><strong>Default Sort:</strong></p>
+<ul>
+<li>First click sorts descending (newest/highest first)</li>
+<li>Best for finding recent actions or high Action IDs</li>
+</ul>
+<p><strong>Action ID Sorting:</strong></p>
+<ul>
+<li>Numeric sort (1, 2, 10, 100, not 1, 10, 100, 2)</li>
+<li>Descending shows newest actions first</li>
+<li>Ascending shows oldest actions first</li>
+</ul>
+<p><strong>Date &amp; Time Sorting:</strong></p>
+<ul>
+<li>Chronological sort by timestamp</li>
+<li>Descending shows most recent first</li>
+<li>Ascending shows oldest first</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sorting reorders all filtered results before pagination. The order you see on each page reflects the global sort order.</p>
+</div>
+<hr />
+<h2 id="pagination">Pagination<a class="headerlink" href="#pagination" title="Permanent link">&para;</a></h2>
+<p>The Sync Log displays <strong>10 items per page</strong> for optimal performance and readability.</p>
+<h3 id="pagination-controls">Pagination Controls<a class="headerlink" href="#pagination-controls" title="Permanent link">&para;</a></h3>
+<p>Located at the bottom of the table:</p>
+<ul>
+<li><strong>«</strong> - Jump to first page</li>
+<li><strong>‹</strong> - Previous page</li>
+<li><strong>Page Numbers</strong> - Direct page navigation (up to 5 pages shown)</li>
+<li><strong>›</strong> - Next page</li>
+<li><strong>»</strong> - Jump to last page</li>
+</ul>
+<h3 id="page-statistics">Page Statistics<a class="headerlink" href="#page-statistics" title="Permanent link">&para;</a></h3>
+<p>Below the pagination controls, you'll see:
+<div class="highlight"><pre><span></span><code>Showing 1–10 of 150
+</code></pre></div></p>
+<p>This indicates:</p>
+<ul>
+<li><strong>1–10</strong> - Items currently displayed on this page</li>
+<li><strong>150</strong> - Total items matching current filters</li>
+</ul>
+<h3 id="navigation-tips">Navigation Tips<a class="headerlink" href="#navigation-tips" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Click page numbers to jump directly to a page</li>
+<li>Use arrow buttons for sequential navigation</li>
+<li>First/Last page buttons are disabled when already on that page</li>
+<li>When filtering reduces total items, pagination adjusts automatically</li>
+</ul>
+<hr />
+<h2 id="action-logs-column">Action Logs Column<a class="headerlink" href="#action-logs-column" title="Permanent link">&para;</a></h2>
+<p>The <strong>Action Logs</strong> column provides detailed execution information for each action.</p>
+<h3 id="whats-logged">What's Logged<a class="headerlink" href="#whats-logged" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Timestamp of each log entry</li>
+<li>Execution progress messages</li>
+<li>API request/response details</li>
+<li>Error messages and stack traces</li>
+<li>Completion confirmations</li>
+</ul>
+<h3 id="log-entry-format">Log Entry Format<a class="headerlink" href="#log-entry-format" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>2025-12-29 15:30:45 - Product created successfully (ID: 12345)
+2025-12-29 15:30:46 - Images downloaded and attached
+2025-12-29 15:30:47 - Action completed
+</code></pre></div>
+<h3 id="scrollable-logs">Scrollable Logs<a class="headerlink" href="#scrollable-logs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Logs box has maximum height of 200px</li>
+<li>Scroll vertically to view all log entries</li>
+<li>Long error messages are fully visible (word-wrapped)</li>
+</ul>
+<h3 id="no-logs-available">No Logs Available<a class="headerlink" href="#no-logs-available" title="Permanent link">&para;</a></h3>
+<p>If you see "No logs available", it means:</p>
+<ul>
+<li>Action hasn't started yet (Pending status)</li>
+<li>Logs were pruned after 30 days</li>
+<li>Action Scheduler couldn't retrieve logs</li>
+</ul>
+<hr />
+<h2 id="using-sync-log-for-troubleshooting">Using Sync Log for Troubleshooting<a class="headerlink" href="#using-sync-log-for-troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="finding-failed-actions">Finding Failed Actions<a class="headerlink" href="#finding-failed-actions" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Set <strong>Action Status</strong> filter to <strong>Failed</strong></li>
+<li>Review the <strong>Action Logs</strong> column for error messages</li>
+<li>Note the <strong>Action Type</strong> and <strong>Product Name</strong></li>
+<li>Check common issues in <a href="../troubleshooting/">Troubleshooting Guide</a></li>
+</ol>
+<h3 id="tracking-specific-products">Tracking Specific Products<a class="headerlink" href="#tracking-specific-products" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Enter product <strong>SKU</strong> in search box</li>
+<li>Or enter <strong>Product Name</strong> in search box</li>
+<li>Review all actions for that product</li>
+<li>Check for any failed or pending actions</li>
+</ol>
+<h3 id="monitoring-webhook-activity">Monitoring Webhook Activity<a class="headerlink" href="#monitoring-webhook-activity" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Search for <strong>"Webhook"</strong> in search box</li>
+<li>Or filter by recent dates to see latest webhooks</li>
+<li>Verify webhook status is "Complete"</li>
+<li>Check Action Logs for any errors</li>
+</ol>
+<h3 id="investigating-slow-syncs">Investigating Slow Syncs<a class="headerlink" href="#investigating-slow-syncs" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Filter by <strong>Date Range</strong> for your sync period</li>
+<li>Look for many <strong>Pending</strong> or <strong>Failed</strong> actions</li>
+<li>Check <strong>Action Logs</strong> for timeout errors</li>
+<li>Review server performance during that time</li>
+</ol>
+<hr />
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="regular-monitoring">Regular Monitoring<a class="headerlink" href="#regular-monitoring" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Review Sync Log weekly</li>
+<li>✅ Check for failed actions and address them</li>
+<li>✅ Monitor webhook activity if using real-time sync</li>
+<li>✅ Clear old failed actions if resolved</li>
+</ul>
+<h3 id="after-manual-sync">After Manual Sync<a class="headerlink" href="#after-manual-sync" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Filter to recent date range</li>
+<li>✅ Check for any failed actions</li>
+<li>✅ Verify all expected products show as "Complete"</li>
+<li>✅ Review Action Logs for any warnings</li>
+</ul>
+<h3 id="troubleshooting-workflow">Troubleshooting Workflow<a class="headerlink" href="#troubleshooting-workflow" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Identify the issue (missing product, failed webhook, etc.)</li>
+<li>Search Sync Log for related product/SKU</li>
+<li>Check Action Status and Action Logs</li>
+<li>Note any error messages</li>
+<li>Consult <a href="../troubleshooting/">Troubleshooting Guide</a> with error details</li>
+</ol>
+<h3 id="data-retention">Data Retention<a class="headerlink" href="#data-retention" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Logs are retained for <strong>30 days only</strong></li>
+<li>Action Scheduler automatically prunes old logs</li>
+<li>Export important error messages for records</li>
+<li>Take screenshots of critical failures</li>
+</ul>
+<hr />
+<h2 id="common-scenarios">Common Scenarios<a class="headerlink" href="#common-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="scenario-1-product-not-syncing">Scenario 1: Product Not Syncing<a class="headerlink" href="#scenario-1-product-not-syncing" title="Permanent link">&para;</a></h3>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Search for product <strong>SKU</strong> in Sync Log</li>
+<li>If no results: Product may not be in Zoho or warehouse</li>
+<li>If found with "Failed" status: Check Action Logs for errors</li>
+<li>If found with "Pending": Check if Action Scheduler is running</li>
+</ol>
+<h3 id="scenario-2-images-missing">Scenario 2: Images Missing<a class="headerlink" href="#scenario-2-images-missing" title="Permanent link">&para;</a></h3>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Search for <strong>"Image Upload"</strong> or <strong>"Image Optimization"</strong></li>
+<li>Filter by product SKU or name</li>
+<li>Check if image actions completed successfully</li>
+<li>Review Action Logs for download errors or API limits</li>
+</ol>
+<h3 id="scenario-3-webhook-not-processing">Scenario 3: Webhook Not Processing<a class="headerlink" href="#scenario-3-webhook-not-processing" title="Permanent link">&para;</a></h3>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Search for <strong>"Webhook"</strong> near the time of Zoho change</li>
+<li>Check if webhook was received (should show in log)</li>
+<li>If missing: Verify webhook status is active</li>
+<li>If failed: Check Action Logs for signature or API errors</li>
+</ol>
+<h3 id="scenario-4-variation-not-created">Scenario 4: Variation Not Created<a class="headerlink" href="#scenario-4-variation-not-created" title="Permanent link">&para;</a></h3>
+<p><strong>Steps:</strong></p>
+<ol>
+<li>Search for <strong>"Variation"</strong> or parent product SKU</li>
+<li>Check if "Created Variation" actions exist</li>
+<li>If failed: Review Action Logs for SKU or attribute errors</li>
+<li>Verify "Create Missing Variations" is enabled</li>
+</ol>
+<hr />
+<h2 id="technical-details">Technical Details<a class="headerlink" href="#technical-details" title="Permanent link">&para;</a></h2>
+<h3 id="action-scheduler-integration">Action Scheduler Integration<a class="headerlink" href="#action-scheduler-integration" title="Permanent link">&para;</a></h3>
+<p>The Sync Log displays actions from WordPress Action Scheduler:</p>
+<ul>
+<li><strong>Action ID</strong>: Unique identifier in <code>actionscheduler_actions</code> table</li>
+<li><strong>Status</strong>: Real-time status from Action Scheduler</li>
+<li><strong>Logs</strong>: Retrieved from <code>actionscheduler_logs</code> table</li>
+<li><strong>Auto-cleanup</strong>: Actions older than 30 days are automatically removed</li>
+</ul>
+<h3 id="performance-optimization">Performance Optimization<a class="headerlink" href="#performance-optimization" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Client-side filtering</strong>: Instant filter/search without server requests</li>
+<li><strong>Pagination</strong>: Only 10 rows render at a time for fast loading</li>
+<li><strong>Debounced search</strong>: 150ms delay prevents excessive re-filtering</li>
+<li><strong>In-memory model</strong>: Filtering operates on data model, not DOM text</li>
+</ul>
+<h3 id="sorting-algorithm">Sorting Algorithm<a class="headerlink" href="#sorting-algorithm" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Numeric columns</strong> (Action ID): Integer comparison</li>
+<li><strong>Date columns</strong> (Date &amp; Time): Unix timestamp comparison</li>
+<li><strong>Stable sort</strong>: Maintains relative order of equal elements</li>
+</ul>
+<hr />
+<h2 id="keyboard-shortcuts">Keyboard Shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permanent link">&para;</a></h2>
+<p>While there are no built-in keyboard shortcuts, you can use browser features:</p>
+<ul>
+<li><strong>Ctrl+F</strong> / <strong>Cmd+F</strong> - Browser find (searches visible page only)</li>
+<li><strong>Tab</strong> - Navigate between filters</li>
+<li><strong>Enter</strong> - Apply date picker selection</li>
+<li><strong>Esc</strong> - Close date picker</li>
+</ul>
+<hr />
+<h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
+<h3 id="30-day-window">30-Day Window<a class="headerlink" href="#30-day-window" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Only actions from last 30 days are shown</li>
+<li>Older actions are automatically pruned</li>
+<li>Export or screenshot critical errors for long-term records</li>
+</ul>
+<h3 id="action-scheduler-dependency">Action Scheduler Dependency<a class="headerlink" href="#action-scheduler-dependency" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Relies on WordPress Action Scheduler</li>
+<li>If Action Scheduler is disabled, logs won't appear</li>
+<li>Requires Action Scheduler database tables</li>
+</ul>
+<h3 id="no-export-function">No Export Function<a class="headerlink" href="#no-export-function" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Currently no CSV export feature</li>
+<li>Use browser print or screenshots to save records</li>
+<li>Copy-paste log entries for documentation</li>
+</ul>
+<hr />
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../monitoring/"><strong>Monitor Sync Status →</strong></a> - Real-time sync progress</li>
+<li><a href="../troubleshooting/"><strong>Troubleshooting Guide →</strong></a> - Fix sync issues</li>
+<li><a href="../webhooks/"><strong>Webhook Integration →</strong></a> - Real-time sync setup</li>
+</ul>
+<hr />
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<p>Questions about Sync Log?</p>
+<ul>
+<li>📧 Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#97;&#108;&#101;&#115;&#64;&#108;&#105;&#110;&#107;&#122;&#111;&#104;&#111;&#46;&#99;&#111;&#109;">&#115;&#97;&#108;&#101;&#115;&#64;&#108;&#105;&#110;&#107;&#122;&#111;&#104;&#111;&#46;&#99;&#111;&#109;</a>, <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#107;&#114;&#101;&#110;&#111;&#118;&#97;&#116;&#101;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#107;&#114;&#101;&#110;&#111;&#118;&#97;&#116;&#101;&#46;&#99;&#111;&#109;</a></li>
+<li>Include Action ID and log screenshots when reporting issues</li>
+<li>Note the Date &amp; Time of the problematic action</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 29, 2025 15:35:51 UTC">December 29, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["instant"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
