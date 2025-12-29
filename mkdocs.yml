@@ -1,0 +1,71 @@
+site_name: LinkZoho Documentation
+nav:
+  - Home: 'index.md'
+  - LZ Books:
+      - Overview: 'lz-books/index.md'
+      - Installation: 'lz-books/plugin-installation.md'
+      - Activation: 'lz-books/plugin-activation.md'
+      - Prerequisites: 'lz-books/checks-prerequisites.md'
+      - Client Credentials: 'lz-books/client-credentials-setup.md'
+      - Authentication: 'lz-books/authentication.md'
+      - Sales Orders: 'lz-books/sales-orders.md'
+      - Invoices: 'lz-books/invoices.md'
+      - Inventory: 'lz-books/inventory.md'
+      - Payments: 'lz-books/payments.md'
+  - LZ SKU Sync:
+      - Overview: 'lz-sku-sync/index.md'
+      - Installation: 'lz-sku-sync/installation.md'
+      - Initial Setup: 'lz-sku-sync/initial-setup.md'
+      - Sync Methods: 'lz-sku-sync/sync-methods.md'
+      - Product Settings: 'lz-sku-sync/product-settings.md'
+      - Image Management: 'lz-sku-sync/image-management.md'
+      - Inventory: 'lz-sku-sync/inventory.md'
+      - Monitoring: 'lz-sku-sync/monitoring.md'
+      - Webhooks: 'lz-sku-sync/webhooks.md'
+      - Troubleshooting: 'lz-sku-sync/troubleshooting.md'
+theme:
+  name: material
+  features:
+    - instant
+  font:
+    text: Inter
+    code: Source Code Pro
+  palette:
+      primary: indigo
+      accent: blue
+
+plugins:
+  - search:
+      lang:
+        - en
+  - git-revision-date-localized
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
