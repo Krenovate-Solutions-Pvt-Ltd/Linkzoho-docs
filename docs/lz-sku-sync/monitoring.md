@@ -270,7 +270,7 @@ For detailed technical logs:
 **Solution:**
 
 - Hard refresh browser (Ctrl+F5 or Cmd+Shift+R)
-- Check **LZ SKU Sync > Sync Log** for queue status
+- Check **LZ SKU Sync > Sync Log** for queue status (see [Sync Log Guide](sync-log.md))
 - Review PHP error logs
 
 ### Recently Synced Items Empty

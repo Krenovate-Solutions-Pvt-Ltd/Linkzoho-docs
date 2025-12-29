@@ -139,7 +139,7 @@ Image downloads and processing happen asynchronously:
 - ✅ Full logging for debugging
 
 !!! tip
-    Check image processing status at **LZ SKU Sync > Sync Log** → Search for `Image Upload`
+    Check image processing status at **LZ SKU Sync > Sync Log** → Search for `Image Upload`. See [Sync Log Guide](sync-log.md) for search and filtering details.
 
 ---
 
@@ -189,7 +189,7 @@ Image downloads and processing happen asynchronously:
 **Solutions:**
 
 - ✅ Verify images exist in Zoho Inventory (Items → Attachments)
-- ✅ Check Action Scheduler for errors: **LZ SKU Sync > Sync Log**
+- ✅ Check [**Sync Log**](sync-log.md) for errors: **LZ SKU Sync > Sync Log**
 - ✅ Verify WordPress uploads directory permissions (should be 755)
 - ✅ Check Zoho API rate limits (100 requests/min)
 
@@ -237,7 +237,7 @@ Image downloads and processing happen asynchronously:
 
 - Be patient - large catalogs take time
 - Images download in background (can close browser)
-- Check progress at **LZ SKU Sync > Sync Log**
+- Check progress at **LZ SKU Sync > Sync Log** (see [Sync Log Guide](sync-log.md))
 
 ---
 
