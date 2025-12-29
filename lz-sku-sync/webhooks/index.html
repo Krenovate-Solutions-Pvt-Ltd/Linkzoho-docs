@@ -1,0 +1,2385 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../monitoring/">
+      
+      
+        <link rel="next" href="../troubleshooting/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Webhooks - LinkZoho Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#webhook-integration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="LinkZoho Documentation" class="md-header__button md-logo" aria-label="LinkZoho Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LinkZoho Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Webhooks
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="LinkZoho Documentation" class="md-nav__button md-logo" aria-label="LinkZoho Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LinkZoho Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LZ Books
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LZ Books
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/plugin-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/plugin-activation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/checks-prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prerequisites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/client-credentials-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client Credentials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/sales-orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sales Orders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/invoices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Invoices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/payments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LZ SKU Sync
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LZ SKU Sync
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../initial-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Initial Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync Methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../product-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../image-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Image Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Webhooks
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Webhooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Are Webhooks?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-webhooks-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Webhooks Work
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Webhooks Work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatic Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automatic Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enable Webhooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-automatically" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Happens Automatically
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Webhook Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-zoho-webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Zoho Webhook
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-zoho-workflow-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Zoho Workflow Rule
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-wordpress-rest-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. WordPress REST Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security &amp; Validation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security &amp; Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hmac-signature-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HMAC Signature Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-frequency-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync Frequency Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wordpress-nonces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WordPress Nonces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook-request-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Request Format
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Webhook Request Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Body
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook-status-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Status Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Webhook Status Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Indicator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toggle-webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toggle Webhook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Webhooks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring Webhooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recently-synced-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recently Synced Items
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-sync-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Sync Log
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last-received-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Last Received Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Lifecycle
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Webhook Lifecycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation-automatic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creation (Automatic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deactivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deactivation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reactivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reactivation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deletion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Webhooks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Webhooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webhooks-not-receiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhooks Not Receiving
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signature-verification-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signature Verification Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delayed-webhook-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delayed Webhook Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-products-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Duplicate Products Created
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ongoing-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ongoing Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temporary-pause" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temporary Pause
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Are Webhooks?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-webhooks-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Webhooks Work
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Webhooks Work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automatic-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automatic Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automatic Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enable Webhooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-automatically" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Happens Automatically
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Components
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Webhook Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-zoho-webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Zoho Webhook
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-zoho-workflow-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Zoho Workflow Rule
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-wordpress-rest-endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. WordPress REST Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security &amp; Validation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security &amp; Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hmac-signature-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HMAC Signature Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync-frequency-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sync Frequency Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wordpress-nonces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WordPress Nonces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook-request-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Request Format
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Webhook Request Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Headers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Body
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook-status-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Status Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Webhook Status Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Indicator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toggle-webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toggle Webhook
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Webhooks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring Webhooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recently-synced-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recently Synced Items
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-sync-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Sync Log
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#last-received-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Last Received Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook-lifecycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhook Lifecycle
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Webhook Lifecycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation-automatic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creation (Automatic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deactivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deactivation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reactivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reactivation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deletion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Webhooks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Webhooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webhooks-not-receiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Webhooks Not Receiving
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signature-verification-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signature Verification Failures
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delayed-webhook-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delayed Webhook Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#duplicate-products-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Duplicate Products Created
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ongoing-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ongoing Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temporary-pause" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temporary Pause
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="webhook-integration">Webhook Integration<a class="headerlink" href="#webhook-integration" title="Permanent link">&para;</a></h1>
+<p>Learn how to set up real-time synchronization using Zoho Inventory webhooks.</p>
+<hr />
+<h2 id="what-are-webhooks">What Are Webhooks?<a class="headerlink" href="#what-are-webhooks" title="Permanent link">&para;</a></h2>
+<p>Webhooks enable <strong>real-time, automatic synchronization</strong> from Zoho Inventory to WooCommerce. When you create or update an item in Zoho, the change appears in your store within seconds—no manual sync required.</p>
+<hr />
+<h2 id="how-webhooks-work">How Webhooks Work<a class="headerlink" href="#how-webhooks-work" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>sequenceDiagram
+    participant User
+    participant Zoho as Zoho Inventory
+    participant Workflow as Zoho Workflow
+    participant Webhook as Webhook URL
+    participant WP as WordPress
+    participant WC as WooCommerce
+
+    User-&gt;&gt;Zoho: Create/Update Item
+    Zoho-&gt;&gt;Workflow: Trigger Event
+    Workflow-&gt;&gt;Webhook: POST Item Data
+    Webhook-&gt;&gt;WP: Receive &amp; Verify
+    WP-&gt;&gt;WP: Fetch Full Item Details
+    WP-&gt;&gt;WC: Create/Update Product
+    WC--&gt;&gt;User: Product Updated!</code></pre>
+<h3 id="the-flow">The Flow<a class="headerlink" href="#the-flow" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Event</strong>: Item created or updated in Zoho Inventory</li>
+<li><strong>Workflow</strong>: Zoho workflow rule triggers</li>
+<li><strong>Webhook POST</strong>: Data sent to WordPress endpoint</li>
+<li><strong>Verification</strong>: WordPress verifies HMAC signature</li>
+<li><strong>Fetch Details</strong>: Full item data retrieved from Zoho API</li>
+<li><strong>Queue Job</strong>: Sync job enqueued in Action Scheduler</li>
+<li><strong>Process</strong>: Product created/updated in WooCommerce</li>
+<li><strong>Complete</strong>: Change reflected in your store</li>
+</ol>
+<hr />
+<h2 id="automatic-setup">Automatic Setup<a class="headerlink" href="#automatic-setup" title="Permanent link">&para;</a></h2>
+<p>The plugin handles all webhook configuration automatically!</p>
+<h3 id="enable-webhooks">Enable Webhooks<a class="headerlink" href="#enable-webhooks" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Go to <strong>LZ SKU Sync &gt; Sync Status</strong></li>
+<li>Find <strong>Sync Frequency</strong> setting</li>
+<li>Select <strong>"Always (Real-time webhook)"</strong></li>
+<li>Click <strong>Save Preferences</strong></li>
+</ol>
+<h3 id="what-happens-automatically">What Happens Automatically<a class="headerlink" href="#what-happens-automatically" title="Permanent link">&para;</a></h3>
+<p>When you enable webhook sync, the plugin:</p>
+<p>✅ Creates a webhook in Zoho Inventory (<code>/settings/webhooks</code>)<br />
+✅ Creates a workflow rule to trigger on item events (<code>/settings/workflows</code>)<br />
+✅ Sets workflow to trigger on "Item Add/Edit" events<br />
+✅ Registers WordPress REST API endpoint<br />
+✅ Configures HMAC signature verification<br />
+✅ Saves configuration to database</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You don't need to do anything manually in Zoho Inventory. The plugin handles everything through the Zoho API.</p>
+</div>
+<hr />
+<h2 id="webhook-components">Webhook Components<a class="headerlink" href="#webhook-components" title="Permanent link">&para;</a></h2>
+<h3 id="1-zoho-webhook">1. Zoho Webhook<a class="headerlink" href="#1-zoho-webhook" title="Permanent link">&para;</a></h3>
+<p>The webhook URL that receives the POST request:</p>
+<div class="highlight"><pre><span></span><code>https://yoursite.com/wp-json/lz-sku-sync/v1/webhook
+</code></pre></div>
+<p><strong>Registered in Zoho:</strong> <code>/inventory/v1/settings/webhooks</code><br />
+<strong>Receives:</strong> POST requests with item data<br />
+<strong>Security:</strong> HMAC SHA256 signature verification</p>
+<h3 id="2-zoho-workflow-rule">2. Zoho Workflow Rule<a class="headerlink" href="#2-zoho-workflow-rule" title="Permanent link">&para;</a></h3>
+<p>Automated rule that triggers the webhook:</p>
+<p><strong>Trigger:</strong> Item Created or Item Updated<br />
+<strong>Action:</strong> Send webhook POST<br />
+<strong>Status:</strong> Active (green) or Inactive (red)<br />
+<strong>Registered in Zoho:</strong> <code>/inventory/v1/settings/workflows</code></p>
+<h3 id="3-wordpress-rest-endpoint">3. WordPress REST Endpoint<a class="headerlink" href="#3-wordpress-rest-endpoint" title="Permanent link">&para;</a></h3>
+<p>The endpoint that processes incoming webhooks:</p>
+<p><strong>Route:</strong> <code>/wp-json/lz-sku-sync/v1/webhook</code><br />
+<strong>Method:</strong> POST<br />
+<strong>Authentication:</strong> HMAC signature + license key<br />
+<strong>Handler:</strong> <code>Zoho_Inventory_API_Webhook_Receive</code> class</p>
+<hr />
+<h2 id="security-validation">Security &amp; Validation<a class="headerlink" href="#security-validation" title="Permanent link">&para;</a></h2>
+<p>Webhooks are secured with multiple layers of protection:</p>
+<h3 id="hmac-signature-verification">HMAC Signature Verification<a class="headerlink" href="#hmac-signature-verification" title="Permanent link">&para;</a></h3>
+<p>Every webhook request includes a signature header:</p>
+<div class="highlight"><pre><span></span><code>X-Zoho-Webhook-Signature: {hmac_sha256_hash}
+</code></pre></div>
+<p><strong>How it works:</strong>
+1. Zoho signs the request body using your license key (first 50 characters)
+2. WordPress computes the same signature
+3. Signatures are compared using timing-safe comparison
+4. Request rejected if signatures don't match</p>
+<div class="highlight"><pre><span></span><code><span class="x">// Simplified verification logic</span>
+<span class="x">$secret = substr($license_key, 0, 50);</span>
+<span class="x">$computed = hash_hmac(&#39;sha256&#39;, $request_body, $secret);</span>
+<span class="x">if (!hash_equals($computed, $received_signature)) {</span>
+<span class="x">    return 403 Forbidden;</span>
+<span class="x">}</span>
+</code></pre></div>
+<h3 id="license-validation">License Validation<a class="headerlink" href="#license-validation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Active license required for webhooks</li>
+<li>Checked before processing every request</li>
+<li>Expired licenses result in 403 Forbidden</li>
+</ul>
+<h3 id="sync-frequency-check">Sync Frequency Check<a class="headerlink" href="#sync-frequency-check" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Webhooks only processed if enabled in settings</li>
+<li>Prevents processing when user disables webhooks</li>
+<li>Status checked on every request</li>
+</ul>
+<h3 id="wordpress-nonces">WordPress Nonces<a class="headerlink" href="#wordpress-nonces" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Internal AJAX requests use WordPress nonces</li>
+<li>Prevents CSRF attacks</li>
+<li>Standard WordPress security</li>
+</ul>
+<hr />
+<h2 id="webhook-request-format">Webhook Request Format<a class="headerlink" href="#webhook-request-format" title="Permanent link">&para;</a></h2>
+<h3 id="headers">Headers<a class="headerlink" href="#headers" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nf">POST</span> <span class="nn">/wp-json/lz-sku-sync/v1/webhook</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">yoursite.com</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">application/json</span>
+<span class="na">X-Zoho-Webhook-Signature</span><span class="o">:</span> <span class="l">a1b2c3d4e5f6...</span>
+</code></pre></div>
+<h3 id="body">Body<a class="headerlink" href="#body" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;item&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;item_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1234567890&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;sku&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PROD-001&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sample Product&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;rate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">99.99</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;available_stock&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;group_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;attribute_name1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Size&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;attribute_option_name1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Large&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;...&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="webhook-status-management">Webhook Status Management<a class="headerlink" href="#webhook-status-management" title="Permanent link">&para;</a></h2>
+<h3 id="status-indicator">Status Indicator<a class="headerlink" href="#status-indicator" title="Permanent link">&para;</a></h3>
+<p>Visual indicator shows webhook status:</p>
+<ul>
+<li>🟢 <strong>Active</strong> (Green): Receiving and processing webhooks</li>
+<li>🔴 <strong>Inactive</strong> (Red): Webhooks paused</li>
+</ul>
+<h3 id="toggle-webhook">Toggle Webhook<a class="headerlink" href="#toggle-webhook" title="Permanent link">&para;</a></h3>
+<p>To pause/resume without deleting configuration:</p>
+<ol>
+<li>Click the <strong>webhook status indicator</strong></li>
+<li>Status toggles between active/inactive</li>
+<li>Workflow rule updated in Zoho</li>
+<li>No data lost - configuration preserved</li>
+</ol>
+<p><strong>Active:</strong>
+- Workflow rule set to "active" in Zoho
+- Webhook events processed
+- Products updated in real-time</p>
+<p><strong>Inactive:</strong>
+- Workflow rule set to "inactive" in Zoho
+- Webhook events ignored
+- Manual sync still works</p>
+<hr />
+<h2 id="monitoring-webhooks">Monitoring Webhooks<a class="headerlink" href="#monitoring-webhooks" title="Permanent link">&para;</a></h2>
+<h3 id="recently-synced-items">Recently Synced Items<a class="headerlink" href="#recently-synced-items" title="Permanent link">&para;</a></h3>
+<p>Webhook-triggered syncs appear in the "Recently Synced Items" table:</p>
+<ul>
+<li><strong>Action Type</strong>: "Webhook Sync" or specific action</li>
+<li><strong>Timestamp</strong>: When webhook was received</li>
+<li><strong>Product Details</strong>: SKU, name, type</li>
+<li><strong>Action ID</strong>: Link to full logs</li>
+</ul>
+<h3 id="webhook-sync-log">Webhook Sync Log<a class="headerlink" href="#webhook-sync-log" title="Permanent link">&para;</a></h3>
+<p>30-day history of webhook events:</p>
+<p><strong>Includes:</strong>
+- Webhook receipt timestamp
+- Item data received
+- Sync job enqueued ID
+- Processing result
+- Error details (if any)</p>
+<p>Access at <strong>LZ SKU Sync &gt; Sync Status &gt; Webhook Sync Log</strong></p>
+<h3 id="last-received-data">Last Received Data<a class="headerlink" href="#last-received-data" title="Permanent link">&para;</a></h3>
+<p>View the last webhook payload:</p>
+<ul>
+<li><strong>Last Received</strong>: Timestamp</li>
+<li><strong>Last Data</strong>: Full JSON payload</li>
+<li><strong>Workflow Status</strong>: Current status</li>
+</ul>
+<p>Useful for debugging and verification.</p>
+<hr />
+<h2 id="webhook-lifecycle">Webhook Lifecycle<a class="headerlink" href="#webhook-lifecycle" title="Permanent link">&para;</a></h2>
+<h3 id="creation-automatic">Creation (Automatic)<a class="headerlink" href="#creation-automatic" title="Permanent link">&para;</a></h3>
+<p>When you enable "Always (Real-time)":</p>
+<ol>
+<li>Plugin calls <code>/inventory/v1/settings/webhooks</code> to create webhook</li>
+<li>Webhook URL set to your site's endpoint</li>
+<li>Plugin calls <code>/inventory/v1/settings/workflows</code> to create rule</li>
+<li>Rule configured to trigger on "Item Add/Edit"</li>
+<li>Rule set to active status</li>
+<li>IDs saved to database</li>
+</ol>
+<h3 id="deactivation">Deactivation<a class="headerlink" href="#deactivation" title="Permanent link">&para;</a></h3>
+<p>When you toggle to inactive:</p>
+<ol>
+<li>Plugin calls <code>/inventory/v1/settings/workflows/{id}/inactive</code></li>
+<li>Workflow rule status updated in Zoho</li>
+<li>Status saved as "inactive" in database</li>
+<li>Webhook configuration preserved</li>
+</ol>
+<h3 id="reactivation">Reactivation<a class="headerlink" href="#reactivation" title="Permanent link">&para;</a></h3>
+<p>When you toggle back to active:</p>
+<ol>
+<li>Plugin calls <code>/inventory/v1/settings/workflows/{id}/active</code></li>
+<li>Workflow rule re-enabled in Zoho</li>
+<li>Status updated to "active" in database</li>
+<li>Webhooks resume processing</li>
+</ol>
+<h3 id="deletion">Deletion<a class="headerlink" href="#deletion" title="Permanent link">&para;</a></h3>
+<p>When you deactivate the plugin:</p>
+<ol>
+<li>Plugin calls <code>DELETE /inventory/v1/settings/workflows/{id}</code></li>
+<li>Plugin calls <code>DELETE /inventory/v1/settings/webhooks/{id}</code></li>
+<li>Resources cleaned up in Zoho</li>
+<li>Configuration removed from database</li>
+</ol>
+<hr />
+<h2 id="troubleshooting-webhooks">Troubleshooting Webhooks<a class="headerlink" href="#troubleshooting-webhooks" title="Permanent link">&para;</a></h2>
+<h3 id="webhooks-not-receiving">Webhooks Not Receiving<a class="headerlink" href="#webhooks-not-receiving" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Changes in Zoho don't appear in WooCommerce</p>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li>✅ Verify sync frequency is "Always (Real-time webhook)"</li>
+<li>✅ Check webhook status indicator is green (active)</li>
+<li>✅ Verify license is active and not expired</li>
+<li>✅ Test endpoint manually: <code>curl -X POST https://yoursite.com/wp-json/lz-sku-sync/v1/webhook</code></li>
+<li>✅ Check Zoho webhook logs: Zoho Inventory &gt; Settings &gt; Webhooks</li>
+<li>✅ Review WordPress error logs for signature failures</li>
+</ol>
+<h3 id="signature-verification-failures">Signature Verification Failures<a class="headerlink" href="#signature-verification-failures" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> "Invalid signature" errors in logs</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Verify license key is correct and active</li>
+<li>Check that license wasn't recently regenerated</li>
+<li>Ensure no caching on webhook endpoint</li>
+<li>Deactivate and reactivate webhooks to reset</li>
+</ul>
+<h3 id="delayed-webhook-processing">Delayed Webhook Processing<a class="headerlink" href="#delayed-webhook-processing" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Changes take minutes to appear</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Check Action Scheduler queue size: <strong>LZ SKU Sync &gt; Sync Log</strong></li>
+<li>Verify server has sufficient resources</li>
+<li>Review PHP max_execution_time setting</li>
+<li>Check for server-side caching of API responses</li>
+</ul>
+<h3 id="duplicate-products-created">Duplicate Products Created<a class="headerlink" href="#duplicate-products-created" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Webhook creates duplicate instead of updating</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Verify SKUs match exactly (case-sensitive)</li>
+<li>Check "Create Missing Products" setting</li>
+<li>Review last webhook data for SKU field</li>
+<li>Ensure product wasn't deleted in WooCommerce</li>
+</ul>
+<hr />
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="initial-setup">Initial Setup<a class="headerlink" href="#initial-setup" title="Permanent link">&para;</a></h3>
+<ol>
+<li>✅ Run manual sync first to import all products</li>
+<li>✅ Verify products synced correctly</li>
+<li>✅ Enable webhook sync for ongoing updates</li>
+<li>✅ Monitor first few webhook events</li>
+</ol>
+<h3 id="ongoing-operations">Ongoing Operations<a class="headerlink" href="#ongoing-operations" title="Permanent link">&para;</a></h3>
+<ol>
+<li>✅ Keep webhook status active</li>
+<li>✅ Monitor "Recently Synced Items" weekly</li>
+<li>✅ Review failed webhooks promptly</li>
+<li>✅ Maintain active license</li>
+</ol>
+<h3 id="temporary-pause">Temporary Pause<a class="headerlink" href="#temporary-pause" title="Permanent link">&para;</a></h3>
+<p>To pause without losing configuration:
+- Toggle webhook to inactive (don't disable sync frequency)
+- Make bulk changes in Zoho
+- Toggle back to active
+- Run manual sync to catch changes made while inactive</p>
+<hr />
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../monitoring/"><strong>Monitor Webhook Activity →</strong></a> - Track real-time syncs</li>
+<li><a href="../troubleshooting/"><strong>Troubleshooting Guide →</strong></a> - Fix webhook issues</li>
+<li><a href="#security--validation"><strong>Learn About Security →</strong></a> - Understand protection layers</li>
+</ul>
+<hr />
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<p>Questions about webhooks?</p>
+<ul>
+<li>📧 Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#97;&#108;&#101;&#115;&#64;&#108;&#105;&#110;&#107;&#122;&#111;&#104;&#111;&#46;&#99;&#111;&#109;">&#115;&#97;&#108;&#101;&#115;&#64;&#108;&#105;&#110;&#107;&#122;&#111;&#104;&#111;&#46;&#99;&#111;&#109;</a>, <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#107;&#114;&#101;&#110;&#111;&#118;&#97;&#116;&#101;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#107;&#114;&#101;&#110;&#111;&#118;&#97;&#116;&#101;&#46;&#99;&#111;&#109;</a></li>
+<li>Include webhook logs and last received data when reporting issues</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 29, 2025 12:33:18 UTC">December 29, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["instant"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
