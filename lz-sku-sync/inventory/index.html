@@ -1,0 +1,2227 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../image-management/">
+      
+      
+        <link rel="next" href="../monitoring/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Inventory - LinkZoho Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#inventory-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="LinkZoho Documentation" class="md-header__button md-logo" aria-label="LinkZoho Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LinkZoho Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inventory
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="LinkZoho Documentation" class="md-nav__button md-logo" aria-label="LinkZoho Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LinkZoho Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LZ Books
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LZ Books
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/plugin-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/plugin-activation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Activation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/checks-prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prerequisites
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/client-credentials-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client Credentials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/authentication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/sales-orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sales Orders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/invoices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Invoices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lz-books/payments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LZ SKU Sync
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    LZ SKU Sync
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../initial-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Initial Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sync-methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync Methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../product-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../image-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Image Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-inventory-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Inventory Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statistics-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statistics Display
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Statistics Display">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#woocommerce-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WooCommerce Products
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoho-inventory-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zoho Inventory Items
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stock-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stock Information
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sku-comparison-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SKU Comparison Tables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SKU Comparison Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matching-skus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matching SKUs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-in-woocommerce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Missing in WooCommerce
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-in-zoho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Missing in Zoho
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warehouse-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Warehouse Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Warehouse Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-warehouse-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Warehouse Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-a-warehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selecting a Warehouse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warehouse-specific-stock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Warehouse-Specific Stock
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refresh-inventory-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refresh Inventory Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Refresh Inventory Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-refresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto-Refresh
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-refresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual Refresh
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-sync-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Sync Actions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Sync Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#will-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Will Create
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#will-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Will Update
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#will-ignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Will Ignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-inventory-data-for-decision-making" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Inventory Data for Decision Making
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Inventory Data for Decision Making">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-initial-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before Initial Sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After Sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ongoing-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ongoing Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-dashboard-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inventory Dashboard Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inventory Dashboard Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regular-reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regular Reviews
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#before-major-syncs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before Major Syncs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-warehouse-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After Warehouse Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Inventory
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Inventory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#products-not-appearing-in-zoho-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Products Not Appearing in Zoho List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stock-quantities-incorrect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stock Quantities Incorrect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sku-mismatch-warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SKU Mismatch Warnings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webhooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Webhooks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-inventory-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing Inventory Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statistics-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statistics Display
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Statistics Display">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#woocommerce-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WooCommerce Products
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoho-inventory-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zoho Inventory Items
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stock-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stock Information
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sku-comparison-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SKU Comparison Tables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SKU Comparison Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matching-skus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Matching SKUs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-in-woocommerce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Missing in WooCommerce
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-in-zoho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Missing in Zoho
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#warehouse-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Warehouse Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Warehouse Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multi-warehouse-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-Warehouse Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-a-warehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selecting a Warehouse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warehouse-specific-stock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Warehouse-Specific Stock
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refresh-inventory-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refresh Inventory Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Refresh Inventory Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-refresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto-Refresh
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-refresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manual Refresh
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-sync-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Sync Actions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Sync Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#will-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Will Create
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#will-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Will Update
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#will-ignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Will Ignore
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-inventory-data-for-decision-making" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Inventory Data for Decision Making
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Inventory Data for Decision Making">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-initial-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before Initial Sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After Sync
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ongoing-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ongoing Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-dashboard-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inventory Dashboard Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inventory Dashboard Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regular-reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regular Reviews
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#before-major-syncs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before Major Syncs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-warehouse-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After Warehouse Changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-inventory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Inventory
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Inventory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#products-not-appearing-in-zoho-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Products Not Appearing in Zoho List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stock-quantities-incorrect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stock Quantities Incorrect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sku-mismatch-warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SKU Mismatch Warnings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Support
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="inventory-management">Inventory Management<a class="headerlink" href="#inventory-management" title="Permanent link">&para;</a></h1>
+<p>Monitor and manage your product inventory with the comprehensive Inventory Overview dashboard.</p>
+<hr />
+<h2 id="accessing-inventory-overview">Accessing Inventory Overview<a class="headerlink" href="#accessing-inventory-overview" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Go to <strong>LZ SKU Sync &gt; Inventory Overview</strong></li>
+<li>View real-time statistics about your products</li>
+<li>Compare Zoho and WooCommerce inventories</li>
+<li>Identify missing or mismatched SKUs</li>
+</ol>
+<p><img alt="Inventory Overview Dashboard" src="../images/inventory-overview.png" /></p>
+<hr />
+<h2 id="statistics-display">Statistics Display<a class="headerlink" href="#statistics-display" title="Permanent link">&para;</a></h2>
+<p>The Inventory Overview provides comprehensive statistics about your products across both systems.</p>
+<h3 id="woocommerce-products">WooCommerce Products<a class="headerlink" href="#woocommerce-products" title="Permanent link">&para;</a></h3>
+<p><strong>Total Products</strong></p>
+<ul>
+<li>Count of all products in WooCommerce</li>
+<li>Includes simple and variable products</li>
+</ul>
+<p><strong>Simple Products</strong></p>
+<ul>
+<li>Total simple products</li>
+<li>How many have SKUs assigned</li>
+<li>How many are missing SKUs</li>
+</ul>
+<p><strong>Variable Products</strong></p>
+<ul>
+<li>Count of parent variable products</li>
+<li>Total number of variations</li>
+<li>Variations with/without SKUs</li>
+</ul>
+<h3 id="zoho-inventory-items">Zoho Inventory Items<a class="headerlink" href="#zoho-inventory-items" title="Permanent link">&para;</a></h3>
+<p><strong>Total Items</strong></p>
+<ul>
+<li>All items in selected warehouse</li>
+<li>Includes simple items and product groups</li>
+</ul>
+<p><strong>Ungrouped Items</strong> (Simple Products)</p>
+<ul>
+<li>Standalone items in Zoho</li>
+<li>Not part of any product group</li>
+</ul>
+<p><strong>Grouped Items</strong> (Variations)</p>
+<ul>
+<li>Items that are part of product groups</li>
+<li>Represent product variations</li>
+</ul>
+<h3 id="stock-information">Stock Information<a class="headerlink" href="#stock-information" title="Permanent link">&para;</a></h3>
+<p>For each category, view:</p>
+<ul>
+<li><strong>Available Stock</strong>: Stock available for sale</li>
+<li><strong>Actual Stock</strong>: Total physical stock</li>
+<li>Difference helps identify reserved/allocated stock</li>
+</ul>
+<hr />
+<h2 id="sku-comparison-tables">SKU Comparison Tables<a class="headerlink" href="#sku-comparison-tables" title="Permanent link">&para;</a></h2>
+<h3 id="matching-skus">Matching SKUs<a class="headerlink" href="#matching-skus" title="Permanent link">&para;</a></h3>
+<p>Lists SKUs that exist in both Zoho Inventory and WooCommerce:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SKU</strong></td>
+<td>Product SKU</td>
+</tr>
+<tr>
+<td><strong>Zoho Name</strong></td>
+<td>Product name in Zoho Inventory</td>
+</tr>
+<tr>
+<td><strong>WooCommerce Name</strong></td>
+<td>Product name in WooCommerce</td>
+</tr>
+<tr>
+<td><strong>Sync Status</strong></td>
+<td>Last sync timestamp</td>
+</tr>
+<tr>
+<td><strong>Action</strong></td>
+<td>Quick sync button</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These products will be <strong>updated</strong> during sync (not created).</p>
+</div>
+<h3 id="missing-in-woocommerce">Missing in WooCommerce<a class="headerlink" href="#missing-in-woocommerce" title="Permanent link">&para;</a></h3>
+<p>SKUs that exist in Zoho but not in WooCommerce:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SKU</strong></td>
+<td>Product SKU from Zoho</td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>Product name from Zoho</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>"Will be created" or "Will be ignored"</td>
+</tr>
+<tr>
+<td><strong>Reason</strong></td>
+<td>Why it will/won't be created</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Status depends on:</strong></p>
+<ul>
+<li>"Create Missing Products" setting</li>
+<li>Product type (simple vs variation)</li>
+<li>"Create Missing Variations" setting</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Enable "Create Missing Products" if you want these items to be automatically created during sync.</p>
+</div>
+<h3 id="missing-in-zoho">Missing in Zoho<a class="headerlink" href="#missing-in-zoho" title="Permanent link">&para;</a></h3>
+<p>WooCommerce SKUs that don't exist in the selected Zoho warehouse:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SKU</strong></td>
+<td>Product SKU from WooCommerce</td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td>Product name from WooCommerce</td>
+</tr>
+<tr>
+<td><strong>Note</strong></td>
+<td>Potential reason</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Common reasons:</strong></p>
+<ul>
+<li>Product discontinued in Zoho</li>
+<li>Different warehouse selected</li>
+<li>SKU mismatch (typo)</li>
+<li>Manually created in WooCommerce</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These products will <strong>not be updated</strong> during sync since they don't exist in the selected Zoho warehouse.</p>
+</div>
+<hr />
+<h2 id="warehouse-management">Warehouse Management<a class="headerlink" href="#warehouse-management" title="Permanent link">&para;</a></h2>
+<h3 id="multi-warehouse-support">Multi-Warehouse Support<a class="headerlink" href="#multi-warehouse-support" title="Permanent link">&para;</a></h3>
+<p>LZ SKU Sync supports Zoho Inventory's multi-warehouse feature:</p>
+<ol>
+<li>Plugin fetches all warehouses from Zoho Inventory</li>
+<li>Fallback to <code>/locations</code> for older Zoho accounts</li>
+<li>Data normalized to standard format (<code>warehouse_id</code>, <code>warehouse_name</code>)</li>
+<li>Stock quantities pulled from warehouse-specific inventory levels</li>
+</ol>
+<h3 id="selecting-a-warehouse">Selecting a Warehouse<a class="headerlink" href="#selecting-a-warehouse" title="Permanent link">&para;</a></h3>
+<p>To sync from a different warehouse:</p>
+<ol>
+<li>Go to <strong>LZ SKU Sync &gt; Sync Status</strong></li>
+<li>Find <strong>Sync Warehouse</strong> dropdown in Sync Preferences</li>
+<li>Select the desired warehouse</li>
+<li>Click <strong>Save Preferences</strong></li>
+<li>Run a new sync to update stock from the new warehouse</li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Changing warehouses affects which products appear in the compare tables and which stock quantities are synced.</p>
+</div>
+<h3 id="warehouse-specific-stock">Warehouse-Specific Stock<a class="headerlink" href="#warehouse-specific-stock" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Each warehouse has independent stock quantities</li>
+<li>Syncing switches between warehouses updates stock to reflect new source</li>
+<li>Products may show as "out of stock" if not available in selected warehouse</li>
+</ul>
+<hr />
+<h2 id="refresh-inventory-data">Refresh Inventory Data<a class="headerlink" href="#refresh-inventory-data" title="Permanent link">&para;</a></h2>
+<p>The Inventory Overview fetches data from both systems:</p>
+<h3 id="auto-refresh">Auto-Refresh<a class="headerlink" href="#auto-refresh" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Data refreshes automatically when page loads</li>
+<li>Last sync timestamp shown at top of page</li>
+</ul>
+<h3 id="manual-refresh">Manual Refresh<a class="headerlink" href="#manual-refresh" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Click <strong>Refresh</strong> button to fetch latest data</li>
+<li>Useful after making changes in Zoho or WooCommerce</li>
+</ul>
+<hr />
+<h2 id="understanding-sync-actions">Understanding Sync Actions<a class="headerlink" href="#understanding-sync-actions" title="Permanent link">&para;</a></h2>
+<p>The Inventory Overview annotates each product with its predicted sync action:</p>
+<h3 id="will-create">Will Create<a class="headerlink" href="#will-create" title="Permanent link">&para;</a></h3>
+<ul>
+<li>SKU doesn't exist in WooCommerce</li>
+<li>"Create Missing Products" is enabled</li>
+<li>Product type matches enabled settings</li>
+</ul>
+<h3 id="will-update">Will Update<a class="headerlink" href="#will-update" title="Permanent link">&para;</a></h3>
+<ul>
+<li>SKU exists in both systems</li>
+<li>Product data will be refreshed from Zoho</li>
+<li>Based on enabled field sync settings</li>
+</ul>
+<h3 id="will-ignore">Will Ignore<a class="headerlink" href="#will-ignore" title="Permanent link">&para;</a></h3>
+<ul>
+<li>SKU doesn't exist in WooCommerce</li>
+<li>"Create Missing Products" is disabled</li>
+<li>Or product type creation is disabled</li>
+</ul>
+<hr />
+<h2 id="using-inventory-data-for-decision-making">Using Inventory Data for Decision Making<a class="headerlink" href="#using-inventory-data-for-decision-making" title="Permanent link">&para;</a></h2>
+<h3 id="before-initial-sync">Before Initial Sync<a class="headerlink" href="#before-initial-sync" title="Permanent link">&para;</a></h3>
+<p>Review the comparison tables to:</p>
+<ul>
+<li>✅ Verify SKU consistency</li>
+<li>✅ Identify products that will be created</li>
+<li>✅ Fix SKU mismatches in Zoho or WooCommerce</li>
+<li>✅ Decide which products to include/exclude</li>
+</ul>
+<h3 id="after-sync">After Sync<a class="headerlink" href="#after-sync" title="Permanent link">&para;</a></h3>
+<p>Use the data to:</p>
+<ul>
+<li>✅ Verify all expected products were synced</li>
+<li>✅ Identify sync failures</li>
+<li>✅ Find products that need manual attention</li>
+<li>✅ Track inventory levels across systems</li>
+</ul>
+<h3 id="ongoing-monitoring">Ongoing Monitoring<a class="headerlink" href="#ongoing-monitoring" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Check for new products in Zoho</li>
+<li>✅ Monitor stock discrepancies</li>
+<li>✅ Identify discontinued products</li>
+<li>✅ Verify warehouse selection</li>
+</ul>
+<hr />
+<h2 id="inventory-dashboard-best-practices">Inventory Dashboard Best Practices<a class="headerlink" href="#inventory-dashboard-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="regular-reviews">Regular Reviews<a class="headerlink" href="#regular-reviews" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Check dashboard weekly to identify issues early</li>
+<li>Review "Missing in WooCommerce" for new products</li>
+<li>Monitor "Missing in Zoho" for discontinued items</li>
+</ul>
+<h3 id="before-major-syncs">Before Major Syncs<a class="headerlink" href="#before-major-syncs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Review all three comparison tables</li>
+<li>Fix SKU mismatches</li>
+<li>Update product creation settings as needed</li>
+<li>Document expected changes</li>
+</ul>
+<h3 id="after-warehouse-changes">After Warehouse Changes<a class="headerlink" href="#after-warehouse-changes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Refresh inventory data</li>
+<li>Review stock quantity changes</li>
+<li>Verify products appear as expected</li>
+<li>Run manual sync to update WooCommerce</li>
+</ul>
+<hr />
+<h2 id="troubleshooting-inventory">Troubleshooting Inventory<a class="headerlink" href="#troubleshooting-inventory" title="Permanent link">&para;</a></h2>
+<h3 id="products-not-appearing-in-zoho-list">Products Not Appearing in Zoho List<a class="headerlink" href="#products-not-appearing-in-zoho-list" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Expected products missing from Zoho inventory</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Verify products exist in selected warehouse</li>
+<li>Check that products are active (not archived) in Zoho</li>
+<li>Ensure API permissions include inventory access</li>
+<li>Try selecting "All Warehouses" if available</li>
+</ul>
+<h3 id="stock-quantities-incorrect">Stock Quantities Incorrect<a class="headerlink" href="#stock-quantities-incorrect" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> WooCommerce stock doesn't match Zoho</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Verify correct warehouse is selected</li>
+<li>Check that "Stock Quantity" is enabled in sync settings</li>
+<li>Review last sync timestamp</li>
+<li>Run manual sync to refresh stock levels</li>
+</ul>
+<h3 id="sku-mismatch-warnings">SKU Mismatch Warnings<a class="headerlink" href="#sku-mismatch-warnings" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Same product shows in both "Missing" lists</p>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>SKUs don't match exactly (case-sensitive)</li>
+<li>Check for extra spaces, hyphens, or characters</li>
+<li>Fix in Zoho or WooCommerce to match</li>
+<li>Re-sync after correction</li>
+</ul>
+<hr />
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../monitoring/"><strong>Monitor Your Syncs →</strong></a> - Track sync progress</li>
+<li><a href="../webhooks/"><strong>Configure Webhooks →</strong></a> - Enable real-time inventory updates</li>
+<li><a href="../troubleshooting/"><strong>Troubleshooting →</strong></a> - Solve inventory issues</li>
+</ul>
+<hr />
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<p>Questions about inventory management?</p>
+<ul>
+<li>📧 Email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#97;&#108;&#101;&#115;&#64;&#108;&#105;&#110;&#107;&#122;&#111;&#104;&#111;&#46;&#99;&#111;&#109;">&#115;&#97;&#108;&#101;&#115;&#64;&#108;&#105;&#110;&#107;&#122;&#111;&#104;&#111;&#46;&#99;&#111;&#109;</a>, <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#107;&#114;&#101;&#110;&#111;&#118;&#97;&#116;&#101;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#107;&#114;&#101;&#110;&#111;&#118;&#97;&#116;&#101;&#46;&#99;&#111;&#109;</a></li>
+<li>Include warehouse name and SKU examples when reporting issues</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 29, 2025 12:33:18 UTC">December 29, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["instant"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
