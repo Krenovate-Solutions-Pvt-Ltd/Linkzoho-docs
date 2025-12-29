@@ -150,6 +150,7 @@ To confirm everything is working:
 **Problem:** "The plugin does not have a valid header" or similar error
 
 **Solution:**
+
 - Ensure you uploaded the correct ZIP file
 - Don't unzip the file before uploading
 - Download a fresh copy if needed
@@ -159,6 +160,7 @@ To confirm everything is working:
 **Problem:** "Invalid license key" or "Order ID not found"
 
 **Solution:**
+
 - Double-check your Order ID and License Key
 - Ensure order status is "Processing" or "Completed"
 - Check that you haven't exceeded site activations
@@ -169,6 +171,7 @@ To confirm everything is working:
 **Problem:** "WooCommerce is required" error
 
 **Solution:**
+
 - Activate WooCommerce before activating LZ SKU Sync
 - Ensure WooCommerce is up to date (7.9+)
 - Check that WooCommerce isn't deactivated by another plugin

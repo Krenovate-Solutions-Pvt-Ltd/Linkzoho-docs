@@ -322,7 +322,7 @@ When you deactivate the plugin:
 
 **Solutions:**
 
-- Check Action Scheduler queue size: **LZ SKU Sync > Sync Log**
+- Check Action Scheduler queue size: **LZ SKU Sync > Sync Log** (see [Sync Log Guide](sync-log.md))
 - Verify server has sufficient resources
 - Review PHP max_execution_time setting
 - Check for server-side caching of API responses

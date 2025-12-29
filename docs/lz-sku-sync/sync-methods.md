@@ -88,7 +88,7 @@ Manual sync uses **WordPress Action Scheduler** to process products in the backg
 - ✅ Full logging for troubleshooting
 
 !!! tip
-    You can check detailed logs at **LZ SKU Sync > Sync Log** in WordPress admin.
+    You can check detailed logs at **LZ SKU Sync > Sync Log** in WordPress admin. See the [Sync Log Guide](sync-log.md) for search and filtering features.
 
 ---
 

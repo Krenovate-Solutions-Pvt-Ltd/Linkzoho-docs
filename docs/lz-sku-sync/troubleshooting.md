@@ -79,7 +79,7 @@ Check that `wp-content/uploads/` is writable (755 permissions).
 
 **E. Review Action Scheduler**
 
-1. Go to **LZ SKU Sync > Sync Log**
+1. Go to **LZ SKU Sync > Sync Log** (see [Sync Log Guide](sync-log.md))
 2. Check for failed image download actions
 3. Review error messages
 
@@ -170,10 +170,9 @@ Check `wp-content/debug.log` for webhook errors.
 
 **D. Review Action Scheduler**
 
-1. Go to **LZ SKU Sync > Sync Log**
-2. Filter by group: `wzi_variation_processing_group`
-3. Check for failed variation actions
-4. Review error messages
+1. Go to **LZ SKU Sync > Sync Log** (see [Sync Log Guide](sync-log.md))
+2. Check for failed variation actions
+3. Review error messages
 
 ---
 
@@ -312,9 +311,9 @@ define('WP_DEBUG_DISPLAY', false);
 
 **Action Scheduler Logs:**
 
-- Navigate to **LZ SKU Sync > Sync Log**
-- Click any action to view execution log
-- Check "Failed" tab for error details
+- Navigate to **LZ SKU Sync > Sync Log** (see [Sync Log Guide](sync-log.md))
+- Use search and filters to find specific actions
+- Check Action Logs column for error details
 
 ---
 
