@@ -1,23 +1,57 @@
-# **LinkZoho- Installation, Activation and Setup Doc**
+# LinkZoho Documentation
 
-Congratulations on purchasing LinkZoho subscription. Now your invoices will have the power of AI and will be generated 100% automatically.
+Welcome to the LinkZoho documentation portal. Please select your plugin below to access the relevant documentation.
 
-Follow the instructions below to install, activate and set up LinkZoho for your ecommerce store.
+---
 
-## **Password Reset**
-1. Once you purchase, you will be logged in automatically into your dashboard
-2. We recommend that you logout and reset your account password to your choice for easy access
-3. Link to reset password- https://app.linkzoho.com/my-account/lost-password/
+## 🔗 LZ Books
+**Invoice & Order Management for Zoho Books**
 
-## **LZ License key & Domain Mapping**
-To use LinkZoho on your store you will need your exclusive license key and map your domain. Follow the steps below to access
+LZ Books seamlessly integrates your WooCommerce store with Zoho Books, automatically generating invoices, managing payments, and syncing orders with the power of AI.
 
-1. Log into your account
-2. Go to orders
-3. Click the button ‘Add domain’ in front of your successful order. Order status should be ‘processing’ or ‘completed’
-4. You will see your license key, don’t share this key with anyone. You will need this key on the activation stage.
-5. In the domain mapping box, enter the full homepage url of your store. If your store is on a subdomain or a subdirectory then enter the url with full subdomain or subdirectory, look at the image below, don't forget to press save.
-![Domain Mapping](image-2.png)
-6. ![Domain Mapped](image-1.png)
-7. After saving it should look like the above image, if you entered a wrong url, press edit and map again.
+**Key Features:**
+- Automatic invoice generation
+- Payment synchronization
+- Sales order management
+- Inventory tracking
+- Real-time order updates
 
+[📖 View LZ Books Documentation](lz-books/index.md){ .md-button .md-button--primary }
+
+---
+
+## 📦 LZ SKU Sync
+**Product & Inventory Sync for Zoho Inventory**
+
+LZ SKU Sync automates product synchronization between Zoho Inventory and WooCommerce, ensuring your online store always reflects accurate product data and inventory levels.
+
+**Key Features:**
+- Real-time product synchronization
+- Automatic inventory updates
+- Image management & optimization
+- Variable product support
+- Webhook integration
+- Multi-warehouse support
+
+[📖 View LZ SKU Sync Documentation](lz-sku-sync/index.md){ .md-button .md-button--primary }
+
+---
+
+## Getting Started
+
+1. **Choose Your Plugin** - Select the plugin you're working with above
+2. **Follow Installation** - Complete the installation and activation process
+3. **Configure Settings** - Set up authentication and preferences
+4. **Start Syncing** - Begin automating your workflow
+
+## Support
+
+Need help? Contact us at:
+
+- 📧 Email: sales@linkzoho.com, support@krenovate.com
+- 🌐 Website: [https://linkzoho.com](https://linkzoho.com)
+- 📖 Documentation: [https://docs.linkzoho.com](https://docs.linkzoho.com)
+
+---
+
+*Last updated: December 2024*
