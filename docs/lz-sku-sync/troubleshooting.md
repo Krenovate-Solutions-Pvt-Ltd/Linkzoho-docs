@@ -171,9 +171,8 @@ Check `wp-content/debug.log` for webhook errors.
 **D. Review Action Scheduler**
 
 1. Go to **LZ SKU Sync > Sync Log**
-2. Filter by group: `wzi_variation_processing_group`
-3. Check for failed variation actions
-4. Review error messages
+2. Check for failed variation actions
+3. Review error messages
 
 ---
 

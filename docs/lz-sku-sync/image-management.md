@@ -139,7 +139,7 @@ Image downloads and processing happen asynchronously:
 - ✅ Full logging for debugging
 
 !!! tip
-    Check image processing status at **LZ SKU Sync > Sync Log** → Filter by group: `wzi_image_processing_group`
+    Check image processing status at **LZ SKU Sync > Sync Log** → Search for `Image Upload`
 
 ---
 
