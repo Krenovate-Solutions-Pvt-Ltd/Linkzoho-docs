@@ -953,15 +953,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#warehouse-management" class="md-nav__link">
+  <a href="#warehouse-selection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Warehouse Management
+        Warehouse Selection
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Warehouse Management">
+    <nav class="md-nav" aria-label="Warehouse Selection">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -980,17 +980,6 @@
     <span class="md-ellipsis">
       
         Selecting a Warehouse
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#warehouse-specific-stock" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Warehouse-Specific Stock
       
     </span>
   </a>
@@ -1529,15 +1518,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#warehouse-management" class="md-nav__link">
+  <a href="#warehouse-selection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Warehouse Management
+        Warehouse Selection
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Warehouse Management">
+    <nav class="md-nav" aria-label="Warehouse Selection">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1556,17 +1545,6 @@
     <span class="md-ellipsis">
       
         Selecting a Warehouse
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#warehouse-specific-stock" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Warehouse-Specific Stock
       
     </span>
   </a>
@@ -2023,17 +2001,10 @@
 <p>These products will <strong>not be updated</strong> during sync since they don't exist in the selected Zoho warehouse.</p>
 </div>
 <hr />
-<h2 id="warehouse-management">Warehouse Management<a class="headerlink" href="#warehouse-management" title="Permanent link">&para;</a></h2>
+<h2 id="warehouse-selection">Warehouse Selection<a class="headerlink" href="#warehouse-selection" title="Permanent link">&para;</a></h2>
 <h3 id="multi-warehouse-support">Multi-Warehouse Support<a class="headerlink" href="#multi-warehouse-support" title="Permanent link">&para;</a></h3>
-<p>LZ SKU Sync supports Zoho Inventory's multi-warehouse feature:</p>
-<ol>
-<li>Plugin fetches all warehouses from Zoho Inventory</li>
-<li>Fallback to <code>/locations</code> for older Zoho accounts</li>
-<li>Data normalized to standard format (<code>warehouse_id</code>, <code>warehouse_name</code>)</li>
-<li>Stock quantities pulled from warehouse-specific inventory levels</li>
-</ol>
+<p>LZ SKU Sync supports syncing from any warehouse in your Zoho Inventory account. You can only sync from one warehouse at a time.</p>
 <h3 id="selecting-a-warehouse">Selecting a Warehouse<a class="headerlink" href="#selecting-a-warehouse" title="Permanent link">&para;</a></h3>
-<p>To sync from a different warehouse:</p>
 <ol>
 <li>Go to <strong>LZ SKU Sync &gt; Sync Status</strong></li>
 <li>Find <strong>Sync Warehouse</strong> dropdown in Sync Preferences</li>
@@ -2043,14 +2014,8 @@
 </ol>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Changing warehouses affects which products appear in the compare tables and which stock quantities are synced.</p>
+<p>Changing warehouses affects which stock quantities are synced to WooCommerce.</p>
 </div>
-<h3 id="warehouse-specific-stock">Warehouse-Specific Stock<a class="headerlink" href="#warehouse-specific-stock" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Each warehouse has independent stock quantities</li>
-<li>Syncing switches between warehouses updates stock to reflect new source</li>
-<li>Products may show as "out of stock" if not available in selected warehouse</li>
-</ul>
 <hr />
 <h2 id="refresh-inventory-data">Refresh Inventory Data<a class="headerlink" href="#refresh-inventory-data" title="Permanent link">&para;</a></h2>
 <p>The Inventory Overview fetches data from both systems:</p>

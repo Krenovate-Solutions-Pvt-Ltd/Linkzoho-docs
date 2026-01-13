@@ -1054,64 +1054,25 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Debug Mode">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#enable-wordpress-debug-logging" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Enable WordPress Debug Logging
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#what-gets-logged" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What Gets Logged
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#view-logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        View Logs
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#server-requirements-check" class="md-nav__link">
+  <a href="#server-requirements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Server Requirements Check
+        Server Requirements
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Server Requirements Check">
+    <nav class="md-nav" aria-label="Server Requirements">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#php-version" class="md-nav__link">
+  <a href="#minimum-requirements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PHP Version
+        Minimum Requirements
       
     </span>
   </a>
@@ -1119,32 +1080,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#php-extensions" class="md-nav__link">
+  <a href="#recommended-php-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PHP Extensions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#memory-limit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Memory Limit
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#max-execution-time" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Max Execution Time
+        Recommended PHP Settings
       
     </span>
   </a>
@@ -1456,64 +1395,25 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Debug Mode">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#enable-wordpress-debug-logging" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Enable WordPress Debug Logging
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#what-gets-logged" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What Gets Logged
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#view-logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        View Logs
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#server-requirements-check" class="md-nav__link">
+  <a href="#server-requirements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Server Requirements Check
+        Server Requirements
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Server Requirements Check">
+    <nav class="md-nav" aria-label="Server Requirements">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#php-version" class="md-nav__link">
+  <a href="#minimum-requirements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PHP Version
+        Minimum Requirements
       
     </span>
   </a>
@@ -1521,32 +1421,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#php-extensions" class="md-nav__link">
+  <a href="#recommended-php-settings" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PHP Extensions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#memory-limit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Memory Limit
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#max-execution-time" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Max Execution Time
+        Recommended PHP Settings
       
     </span>
   </a>
@@ -1739,7 +1617,7 @@
 <ul>
 <li>"Invalid authentication" or "Token expired" errors</li>
 <li>"Failed to connect to Zoho"</li>
-<li>API calls return 401 Unauthorized</li>
+<li>API calls failing</li>
 </ul>
 <p><strong>Solutions:</strong></p>
 <p><strong>A. Auto-Refresh</strong></p>
@@ -1789,14 +1667,11 @@
 <li>Verify "Gallery Images" is enabled (if wanted)</li>
 <li>Save preferences and re-sync</li>
 </ol>
-<p><strong>C. Check PHP ZIP Extension</strong>
-Run in terminal or phpinfo():
-<div class="highlight"><pre><span></span><code>php<span class="w"> </span>-m<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>zip
-</code></pre></div></p>
-<p>If not installed, contact your hosting provider.</p>
-<p><strong>D. Verify Upload Directory</strong>
-Check that <code>wp-content/uploads/</code> is writable (755 permissions).</p>
-<p><strong>E. Review Action Scheduler</strong></p>
+<p><strong>C. Check PHP ZIP Extension</strong></p>
+<p>Contact your hosting provider to ensure the PHP ZIP extension is installed and enabled.</p>
+<p><strong>D. Verify Upload Directory</strong></p>
+<p>Check that your WordPress uploads directory is writable. Contact your hosting provider if you need assistance.</p>
+<p><strong>E. Review Sync Log</strong></p>
 <ol>
 <li>Go to <strong>LZ SKU Sync &gt; Sync Log</strong> (see <a href="../sync-log/">Sync Log Guide</a>)</li>
 <li>Check for failed image download actions</li>
@@ -1823,28 +1698,18 @@ Check that <code>wp-content/uploads/</code> is writable (755 permissions).</p>
 <li><strong>Status Indicator</strong>: Should be green (active)</li>
 <li><strong>License</strong>: Must be active</li>
 </ol>
-<p><strong>B. Test Endpoint</strong>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://yoursite.com/wp-json/lz-sku-sync/v1/webhook
-</code></pre></div>
-Should return a response (even if 403 due to missing signature).</p>
-<p><strong>C. Check Webhook Logs in Zoho</strong></p>
+<p><strong>B. Check Webhook Logs in Zoho</strong></p>
 <ol>
 <li>Log into Zoho Inventory</li>
 <li>Go to <strong>Settings &gt; Webhooks</strong></li>
 <li>Find LZ SKU Sync webhook</li>
 <li>Check delivery logs for errors</li>
 </ol>
-<p><strong>D. Review WordPress Logs</strong></p>
-<p>Enable debug logging in <code>wp-config.php</code>:
-<div class="highlight"><pre><span></span><code><span class="x">define(&#39;WP_DEBUG&#39;, true);</span>
-<span class="x">define(&#39;WP_DEBUG_LOG&#39;, true);</span>
-<span class="x">define(&#39;WP_DEBUG_DISPLAY&#39;, false);</span>
-</code></pre></div></p>
-<p>Check <code>wp-content/debug.log</code> for webhook errors.</p>
-<p><strong>E. Verify License</strong></p>
+<p><strong>C. Enable Debug Mode</strong></p>
+<p>Enable WordPress debug mode (contact your developer or hosting provider for assistance) to capture any errors in the debug log.</p>
+<p><strong>D. Verify License</strong></p>
 <ul>
 <li>Ensure license is active (not expired)</li>
-<li>License key is used for HMAC signature</li>
 <li>Check at <strong>LZ SKU Sync &gt; Settings</strong></li>
 </ul>
 <hr />
@@ -1871,11 +1736,10 @@ Should return a response (even if 403 due to missing signature).</p>
 </ul>
 <p><strong>C. Check Attribute Fields</strong></p>
 <ul>
-<li>Zoho must have <code>attribute_name1</code>, <code>attribute_name2</code>, etc.</li>
-<li>Zoho must have <code>attribute_option_name1</code>, <code>attribute_option_name2</code>, etc.</li>
+<li>Zoho must have attribute names defined for variations</li>
 <li>These fields define WooCommerce attributes</li>
 </ul>
-<p><strong>D. Review Action Scheduler</strong></p>
+<p><strong>D. Review Sync Log</strong></p>
 <ol>
 <li>Go to <strong>LZ SKU Sync &gt; Sync Log</strong> (see <a href="../sync-log/">Sync Log Guide</a>)</li>
 <li>Check for failed variation actions</li>
@@ -1976,53 +1840,30 @@ If issue persists:</p>
 </ul>
 <hr />
 <h2 id="debug-mode">Debug Mode<a class="headerlink" href="#debug-mode" title="Permanent link">&para;</a></h2>
-<p>Enable detailed logging for troubleshooting:</p>
-<h3 id="enable-wordpress-debug-logging">Enable WordPress Debug Logging<a class="headerlink" href="#enable-wordpress-debug-logging" title="Permanent link">&para;</a></h3>
-<p>Add to <code>wp-config.php</code>:
-<div class="highlight"><pre><span></span><code><span class="x">define(&#39;WP_DEBUG&#39;, true);</span>
-<span class="x">define(&#39;WP_DEBUG_LOG&#39;, true);</span>
-<span class="x">define(&#39;WP_DEBUG_DISPLAY&#39;, false);</span>
-</code></pre></div></p>
-<h3 id="what-gets-logged">What Gets Logged<a class="headerlink" href="#what-gets-logged" title="Permanent link">&para;</a></h3>
+<p>If you need detailed logging for troubleshooting, contact your developer or hosting provider to enable WordPress debug logging. This will capture:</p>
 <ul>
-<li>API request/response details</li>
-<li>Action Scheduler execution logs</li>
-<li>Image processing errors</li>
-<li>Webhook signature verification</li>
+<li>Error messages</li>
+<li>Processing logs</li>
 <li>Token refresh attempts</li>
-<li>Error stack traces</li>
+<li>Error details</li>
 </ul>
-<h3 id="view-logs">View Logs<a class="headerlink" href="#view-logs" title="Permanent link">&para;</a></h3>
-<p><strong>WordPress Debug Log:</strong></p>
-<ul>
-<li>Location: <code>wp-content/debug.log</code></li>
-<li>Download via FTP or File Manager</li>
-<li>Search for "LZ SKU Sync" or "Zoho"</li>
-</ul>
-<p><strong>Action Scheduler Logs:</strong></p>
-<ul>
-<li>Navigate to <strong>LZ SKU Sync &gt; Sync Log</strong> (see <a href="../sync-log/">Sync Log Guide</a>)</li>
-<li>Use search and filters to find specific actions</li>
-<li>Check Action Logs column for error details</li>
-</ul>
+<p>The debug log can be found at <code>wp-content/debug.log</code> on your server.</p>
 <hr />
-<h2 id="server-requirements-check">Server Requirements Check<a class="headerlink" href="#server-requirements-check" title="Permanent link">&para;</a></h2>
-<p>Verify your server meets all requirements:</p>
-<h3 id="php-version">PHP Version<a class="headerlink" href="#php-version" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code>php<span class="w"> </span>-v
-</code></pre></div>
-Required: 7.4 or higher</p>
-<h3 id="php-extensions">PHP Extensions<a class="headerlink" href="#php-extensions" title="Permanent link">&para;</a></h3>
-<p><div class="highlight"><pre><span></span><code>php<span class="w"> </span>-m<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;curl|json|zip|gd|imagick|openssl&#39;</span>
-</code></pre></div>
-All should be listed.</p>
-<h3 id="memory-limit">Memory Limit<a class="headerlink" href="#memory-limit" title="Permanent link">&para;</a></h3>
-<p>Check in <code>php.ini</code> or WordPress:
-<div class="highlight"><pre><span></span><code><span class="x">echo WP_MEMORY_LIMIT; // Should be 256M+</span>
-</code></pre></div></p>
-<h3 id="max-execution-time">Max Execution Time<a class="headerlink" href="#max-execution-time" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="x">echo ini_get(&#39;max_execution_time&#39;); // Should be 300+</span>
-</code></pre></div>
+<h2 id="server-requirements">Server Requirements<a class="headerlink" href="#server-requirements" title="Permanent link">&para;</a></h2>
+<p>Ensure your server meets these requirements:</p>
+<h3 id="minimum-requirements">Minimum Requirements<a class="headerlink" href="#minimum-requirements" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PHP Version</strong>: 7.4 or higher (8.0+ recommended)</li>
+<li><strong>WordPress</strong>: 4.7 or higher</li>
+<li><strong>WooCommerce</strong>: 7.9 or higher</li>
+<li><strong>MySQL</strong>: 5.6 or higher</li>
+</ul>
+<h3 id="recommended-php-settings">Recommended PHP Settings<a class="headerlink" href="#recommended-php-settings" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Memory Limit</strong>: 256MB or higher</li>
+<li><strong>Max Execution Time</strong>: 300 seconds or higher</li>
+</ul>
+<p>If you're unsure about your server configuration, contact your hosting provider.</p>
 <hr />
 <h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
 <h3 id="q-can-i-sync-from-woocommerce-to-zoho">Q: Can I sync from WooCommerce to Zoho?<a class="headerlink" href="#q-can-i-sync-from-woocommerce-to-zoho" title="Permanent link">&para;</a></h3>
@@ -2046,8 +1887,7 @@ All should be listed.</p>
 <h3 id="before-contacting-support">Before Contacting Support<a class="headerlink" href="#before-contacting-support" title="Permanent link">&para;</a></h3>
 <ol>
 <li>✅ Check this troubleshooting guide</li>
-<li>✅ Review Action Scheduler logs</li>
-<li>✅ Enable debug mode and check logs</li>
+<li>✅ Review Sync Log for errors</li>
 <li>✅ Verify authentication is connected</li>
 </ol>
 <h3 id="contacting-support">Contacting Support<a class="headerlink" href="#contacting-support" title="Permanent link">&para;</a></h3>
@@ -2060,7 +1900,7 @@ All should be listed.</p>
 <li>Plugin version</li>
 <li>Clear description of issue</li>
 <li>Screenshots of error messages</li>
-<li>Relevant log excerpts (from debug.log or Action Scheduler)</li>
+<li>Relevant log excerpts (from Sync Log)</li>
 <li>Steps to reproduce</li>
 </ul>
 <p><strong>Don't Include:</strong></p>

@@ -1031,41 +1031,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-settings" class="md-nav__link">
+  <a href="#sku-matching" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advanced Settings
+        SKU Matching
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Advanced Settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sku-matching-logic" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SKU Matching Logic
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#product-type-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Product Type Detection
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1619,41 +1591,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-settings" class="md-nav__link">
+  <a href="#sku-matching" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advanced Settings
+        SKU Matching
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Advanced Settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sku-matching-logic" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        SKU Matching Logic
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#product-type-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Product Type Detection
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1932,7 +1876,7 @@
 <ul>
 <li>Each variation gets its own SKU, price, stock, and images</li>
 <li>Parent product automatically inherits first variation's images</li>
-<li>Attributes are automatically extracted from Zoho <code>attribute_name*</code> fields</li>
+<li>Attributes are automatically created from Zoho variation data</li>
 </ul>
 <h3 id="unit-conversions">Unit Conversions<a class="headerlink" href="#unit-conversions" title="Permanent link">&para;</a></h3>
 <p>The plugin automatically converts units from Zoho to WooCommerce:</p>
@@ -1982,24 +1926,12 @@
 </code></pre></div>
 <p><strong>Why?</strong> Only sync stock levels, leave other data unchanged.</p>
 <hr />
-<h2 id="advanced-settings">Advanced Settings<a class="headerlink" href="#advanced-settings" title="Permanent link">&para;</a></h2>
-<h3 id="sku-matching-logic">SKU Matching Logic<a class="headerlink" href="#sku-matching-logic" title="Permanent link">&para;</a></h3>
+<h2 id="sku-matching">SKU Matching<a class="headerlink" href="#sku-matching" title="Permanent link">&para;</a></h2>
 <p>Products are matched between Zoho and WooCommerce using <strong>SKU</strong> as the unique identifier.</p>
-<p><strong>For Simple Products:</strong>
-- Zoho <code>sku</code> → WooCommerce <code>_sku</code></p>
-<p><strong>For Variations:</strong>
-- Zoho variation <code>sku</code> → WooCommerce variation <code>_sku</code></p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>SKUs must match exactly</strong> (case-sensitive). Mismatched SKUs will result in duplicate products if "Create Missing Products" is enabled.</p>
 </div>
-<h3 id="product-type-detection">Product Type Detection<a class="headerlink" href="#product-type-detection" title="Permanent link">&para;</a></h3>
-<p>The plugin automatically determines product type:</p>
-<ul>
-<li><strong>Simple Product</strong>: Zoho item with no <code>group_id</code></li>
-<li><strong>Variation</strong>: Zoho item with a <code>group_id</code> (part of product group)</li>
-<li><strong>Variable Product (Parent)</strong>: Created from product group in Zoho</li>
-</ul>
 <hr />
 <h2 id="what-doesnt-get-synced">What Doesn't Get Synced?<a class="headerlink" href="#what-doesnt-get-synced" title="Permanent link">&para;</a></h2>
 <p>The following are <strong>not currently synced</strong> from Zoho to WooCommerce:</p>
@@ -2055,7 +1987,7 @@
 <p><strong>Solution:</strong></p>
 <ul>
 <li>Verify products have images in Zoho Inventory</li>
-<li>Check Action Scheduler for image download errors</li>
+<li>Check <strong>Sync Log</strong> for errors</li>
 <li>See <a href="../image-management/">Image Management</a> for detailed troubleshooting</li>
 </ul>
 <hr />
